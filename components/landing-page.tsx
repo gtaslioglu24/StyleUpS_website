@@ -262,14 +262,14 @@ export function LandingPage() {
           {/* Sweater - from top-left corner */}
           <div className="garment garment-sweater">
             <div className="garment-media">
-              <Image src="/garments/sweater.png" alt={c.garmentAlt.sweater} width={200} height={230} priority style={{ objectFit: 'contain' }} />
+              <Image src="/garments/sweater.png" alt={c.garmentAlt.sweater} width={220} height={250} priority style={{ objectFit: 'contain' }} />
             </div>
           </div>
 
           {/* Pants - from bottom-left corner */}
           <div className="garment garment-pants">
             <div className="garment-media">
-              <Image src="/garments/pants.png" alt={c.garmentAlt.pants} width={170} height={240} priority style={{ objectFit: 'contain' }} />
+              <Image src="/garments/pants.png" alt={c.garmentAlt.pants} width={185} height={256} priority style={{ objectFit: 'contain' }} />
             </div>
           </div>
 
@@ -283,7 +283,7 @@ export function LandingPage() {
           {/* Coat - from right, scales in */}
           <div className="garment garment-coat">
             <div className="garment-media">
-              <Image src="/garments/coat.png" alt={c.garmentAlt.coat} width={250} height={370} priority style={{ objectFit: 'contain' }} />
+              <Image src="/garments/coat.png" alt={c.garmentAlt.coat} width={280} height={410} priority style={{ objectFit: 'contain' }} />
             </div>
           </div>
 
