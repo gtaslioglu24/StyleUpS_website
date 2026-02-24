@@ -1,0 +1,33 @@
+<svg width="420" height="520" viewBox="0 0 420 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pantsBody" x1="210" y1="54" x2="210" y2="506" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#607BA8"/>
+      <stop offset="1" stop-color="#334C73"/>
+    </linearGradient>
+    <linearGradient id="pantsLight" x1="156" y1="150" x2="238" y2="496" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8EA7D0" stop-opacity=".58"/>
+      <stop offset="1" stop-color="#1F3558" stop-opacity=".26"/>
+    </linearGradient>
+    <filter id="denimNoise" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="19"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.08"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <path d="M120 52H300L286 502H214L205 252L196 502H124L120 52Z" fill="url(#pantsBody)" stroke="#7691BC" stroke-width="8"/>
+  <path d="M120 52H300V118H120V52Z" fill="#4E6893"/>
+  <path d="M205 118V502" stroke="#9DB5D8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M148 122H172" stroke="#CAD9EF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M248 122H272" stroke="#CAD9EF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M157 176C170 188 183 194 197 196" stroke="#AFC3E2" stroke-width="4" stroke-linecap="round"/>
+  <path d="M253 176C240 188 226 194 212 196" stroke="#AFC3E2" stroke-width="4" stroke-linecap="round"/>
+  <path d="M140 438C163 452 182 456 198 458" stroke="#7D96BF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M270 438C247 452 228 456 212 458" stroke="#7D96BF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M138 462H287" stroke="#263F63" stroke-width="10" stroke-linecap="round"/>
+
+  <path d="M130 130H290V492H130V130Z" fill="url(#pantsLight)" opacity=".35"/>
+  <rect x="130" y="122" width="160" height="374" filter="url(#denimNoise)" opacity=".45"/>
+</svg>

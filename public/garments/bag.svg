@@ -1,0 +1,29 @@
+<svg width="420" height="520" viewBox="0 0 420 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bagBody" x1="210" y1="186" x2="210" y2="472" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DCA874"/>
+      <stop offset="1" stop-color="#A76D42"/>
+    </linearGradient>
+    <linearGradient id="bagHandle" x1="210" y1="94" x2="210" y2="188" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ECC89C"/>
+      <stop offset="1" stop-color="#B47F54"/>
+    </linearGradient>
+    <filter id="leatherNoise" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="2" seed="17"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.07"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <path d="M108 186H312V438C312 456 297 470 279 470H141C123 470 108 456 108 438V186Z" fill="url(#bagBody)" stroke="#8E5D38" stroke-width="8"/>
+  <path d="M152 186V152C152 120 178 94 210 94C242 94 268 120 268 152V186" stroke="url(#bagHandle)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M146 248C171 261 249 261 274 248" stroke="#E9C29B" stroke-width="5" stroke-linecap="round"/>
+  <path d="M146 306C171 319 249 319 274 306" stroke="#E9C29B" stroke-width="5" stroke-linecap="round"/>
+  <rect x="182" y="338" width="56" height="42" rx="11" fill="#7E5032"/>
+  <circle cx="210" cy="359" r="10" fill="#E9C79D"/>
+  <path d="M132 420C162 434 258 434 288 420" stroke="#8A5C39" stroke-width="5" stroke-linecap="round"/>
+
+  <rect x="118" y="194" width="184" height="268" filter="url(#leatherNoise)" opacity=".38"/>
+</svg>

@@ -1,0 +1,30 @@
+<svg width="420" height="520" viewBox="0 0 420 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="topBody" x1="210" y1="58" x2="210" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAFBFF"/>
+      <stop offset="1" stop-color="#CEC2E0"/>
+    </linearGradient>
+    <linearGradient id="topShadow" x1="130" y1="140" x2="290" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#9A83BA" stop-opacity=".45"/>
+    </linearGradient>
+    <filter id="cloth" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="2" seed="8"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.04"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <path d="M122 78L164 56H258L298 78L354 146L314 188L280 154V458H140V154L106 188L66 146L122 78Z" fill="url(#topBody)" stroke="#7F66A2" stroke-width="8"/>
+  <path d="M178 56H244V96C244 114 228 128 210 128C192 128 178 114 178 96V56Z" fill="#F4EDFF" stroke="#7F66A2" stroke-width="8"/>
+  <path d="M177 137L210 206L244 137V458H177V137Z" fill="url(#topShadow)"/>
+  <path d="M150 195C171 207 248 207 270 195" stroke="#B09BCC" stroke-width="5" stroke-linecap="round"/>
+  <path d="M146 258C170 274 250 274 274 258" stroke="#B09BCC" stroke-width="5" stroke-linecap="round"/>
+  <path d="M142 322C170 338 250 338 278 322" stroke="#B09BCC" stroke-width="5" stroke-linecap="round"/>
+  <path d="M142 386C170 402 250 402 278 386" stroke="#B09BCC" stroke-width="5" stroke-linecap="round"/>
+  <path d="M210 132V458" stroke="#8F79B0" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 7"/>
+
+  <rect x="124" y="68" width="172" height="392" filter="url(#cloth)" opacity=".55"/>
+</svg>
