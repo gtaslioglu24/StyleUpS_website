@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { useLanguage } from '@/components/language-context';
 
 export default function NotFound() {
   // useLanguage is available because SiteChrome wraps the layout

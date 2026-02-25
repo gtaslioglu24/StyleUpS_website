@@ -172,29 +172,6 @@ const dictionary = {
   },
 } as const;
 
-const garments = [
-  {
-    id: 'sweater',
-    src: '/garments/sweater.png',
-    className: 'garment-sweater',
-  },
-  {
-    id: 'coat',
-    src: '/garments/coat.png',
-    className: 'garment-coat',
-  },
-  {
-    id: 'pants',
-    src: '/garments/pants.png',
-    className: 'garment-pants',
-  },
-  {
-    id: 'shoes',
-    src: '/garments/shoes.png',
-    className: 'garment-shoes',
-  },
-] as const;
-
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -252,38 +229,37 @@ export function LandingPage() {
 
         <motion.div
           className="hero-visual"
-          initial={{ opacity: 0, scale: 0.92, rotateX: 8 }}
-          animate={{ opacity: 1, scale: 1, rotateX: 0 }}
-          transition={{ duration: 1.05, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          style={{ transformStyle: 'preserve-3d', perspective: '1400px' }}
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="stage-glow" />
 
           {/* Sweater - from top-left corner */}
           <div className="garment garment-sweater">
             <div className="garment-media">
-              <Image src="/garments/sweater.png" alt={c.garmentAlt.sweater} width={220} height={250} priority style={{ objectFit: 'contain' }} />
+              <Image src="/garments/sweater.png" alt={c.garmentAlt.sweater} width={220} height={250} priority unoptimized />
             </div>
           </div>
 
           {/* Pants - from bottom-left corner */}
           <div className="garment garment-pants">
             <div className="garment-media">
-              <Image src="/garments/pants.png" alt={c.garmentAlt.pants} width={185} height={256} priority style={{ objectFit: 'contain' }} />
+              <Image src="/garments/pants.png" alt={c.garmentAlt.pants} width={140} height={256} priority unoptimized />
             </div>
           </div>
 
           {/* Shoes - from bottom-right corner */}
           <div className="garment garment-shoes">
             <div className="garment-media">
-              <Image src="/garments/shoes.png" alt={c.garmentAlt.shoes} width={160} height={130} style={{ objectFit: 'contain' }} />
+              <Image src="/garments/shoes.png" alt={c.garmentAlt.shoes} width={160} height={130} unoptimized />
             </div>
           </div>
 
           {/* Coat - from right, scales in */}
           <div className="garment garment-coat">
             <div className="garment-media">
-              <Image src="/garments/coat.png" alt={c.garmentAlt.coat} width={280} height={410} priority style={{ objectFit: 'contain' }} />
+              <Image src="/garments/coat.png" alt={c.garmentAlt.coat} width={280} height={410} priority unoptimized />
             </div>
           </div>
 

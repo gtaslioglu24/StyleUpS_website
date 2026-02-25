@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { LanguageProvider, useLanguage } from '@/components/language-context';
@@ -49,6 +50,15 @@ function SiteChromeInner({ children }: { children: React.ReactNode }) {
       <div className="ambient-bg" aria-hidden />
       <header className="site-header">
         <Link href="/" className="brand-link">
+          <Image
+            src="/logo.png"
+            alt="Outfit AI Logo"
+            width={40}
+            height={40}
+            className="brand-logo"
+            unoptimized
+            priority
+          />
           Outfit AI
         </Link>
 

@@ -28,12 +28,21 @@ export const metadata: Metadata = {
     siteName: 'Outfit AI',
     locale: 'tr_TR',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Outfit AI - Dress Better, Faster',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Outfit AI | Dress Better, Faster',
     description:
       'AI-powered wardrobe management. Build better daily outfits in seconds.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
