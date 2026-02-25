@@ -56,7 +56,7 @@ export function middleware(request: NextRequest) {
   const response = NextResponse.next();
 
   // Prevent caching of HTML pages (static assets are cached by Next.js automatically)
-  if (!request.nextUrl.pathname.match(/\._next|\.(.+)$/)) {
+  if (!request.nextUrl.pathname.match(/_next|\..+$/)) {
     response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
     response.headers.set('Pragma', 'no-cache');
   }

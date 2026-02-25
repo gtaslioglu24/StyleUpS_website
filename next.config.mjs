@@ -5,20 +5,6 @@ const nextConfig = {
   /* ── Hide framework fingerprint ── */
   poweredByHeader: false,
 
-  /* ── Image optimization ── */
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'source.unsplash.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-    ],
-  },
-
   /* ── Security headers ── */
   async headers() {
     return [
