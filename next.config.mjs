@@ -19,11 +19,10 @@ const nextConfig = {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
           },
-          /* Clickjacking protection */
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
+          /* Clickjacking protection – only on production */
+          ...(process.env.NODE_ENV === 'production'
+            ? [{ key: 'X-Frame-Options', value: 'DENY' }]
+            : []),
           /* XSS filter (legacy browsers) */
           {
             key: 'X-XSS-Protection',
@@ -59,7 +58,9 @@ const nextConfig = {
               process.env.NODE_ENV === 'production'
                 ? "connect-src 'self'"
                 : "connect-src 'self' ws: wss:",
-              "frame-ancestors 'none'",
+              process.env.NODE_ENV === 'production'
+                ? "frame-ancestors 'none'"
+                : "frame-ancestors 'self' vscode-webview: http://localhost:*",
               "base-uri 'self'",
               "form-action 'self'",
               "object-src 'none'",
