@@ -7,8 +7,9 @@ import { useLanguage } from '@/components/language-context';
 
 const dictionary = {
   tr: {
-    eyebrow: 'FASHION TECH EXPERIENCE',
-    headline: 'Dress better, faster.',
+    eyebrow: 'MODA TEKNOLOJİ DENEYİMİ',
+    headlineLine1: 'Daha hızlı,',
+    headlineLine2: 'daha şık giyin.',
     subHeadline: 'AI destekli seçim. Gerçek stil akışı. Premium sunum.',
     heroText:
       'StyleUpS, gardırobunu günlük karar motoruna dönüştürür: güçlü eşleştirme, proof moderasyonu ve zarif topluluk akışı.',
@@ -19,13 +20,13 @@ const dictionary = {
       { value: '3x', text: 'Proof kontrolüyle daha güvenli paylaşım' },
       { value: '24/7', text: 'Bulut moderasyon ve plan güvenliği' },
     ],
-    aiPickLabel: 'AI STYLING',
+    aiPickLabel: 'AI STİL ASISTANI',
     aiPickTitle: 'Kombin hazır, sen giyin yeter.',
     aiPickText: '4 parça · 1 saniye · sonsuz stil.',
     section1Title: 'Premium görünüm, gerçek günlük değer.',
     features: [
       {
-        title: 'AI Stylist Picks',
+        title: 'AI Stil Önerileri',
         text: 'Moda uyumlu renk dengesi ve stil tutarlılığıyla gardırobundan güçlü kombinler üretir.',
       },
       {
@@ -58,16 +59,16 @@ const dictionary = {
     section3Title: 'Planlar',
     plans: [
       {
-        name: 'Free',
+        name: 'Ücretsiz',
         limits: '20 parça · günde 2 kombin · günde 1 paylaşım',
         price: '$0',
         note: 'Başlangıç ve deneme için ideal.',
       },
       {
-        name: 'Invite',
+        name: 'Davetli',
         limits: '40 parça · günde 5 kombin · günde 2 paylaşım',
         price: 'Referans ödülü',
-        note: 'Her 5 başarılı davette 1 ay Invite süresi eklenir.',
+        note: 'Her 5 başarılı davette 1 ay Davetli süresi eklenir.',
       },
       {
         name: 'Premium VIP',
@@ -90,7 +91,8 @@ const dictionary = {
   },
   en: {
     eyebrow: 'FASHION TECH EXPERIENCE',
-    headline: 'Dress better, faster.',
+    headlineLine1: 'Dress better,',
+    headlineLine2: 'faster.',
     subHeadline: 'AI-backed picks. Real style flow. Premium presentation.',
     heroText:
       'StyleUpS turns your wardrobe into a daily decision engine with strong matching, proof moderation, and elegant community flow.',
@@ -202,7 +204,8 @@ export function LandingPage() {
         >
           <p className="eyebrow">{c.eyebrow}</p>
           <h1>
-            {c.headline}
+            {c.headlineLine1}<br />
+            {c.headlineLine2}
             <span>{c.subHeadline}</span>
           </h1>
 
