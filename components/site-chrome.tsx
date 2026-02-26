@@ -51,10 +51,10 @@ function SiteChromeInner({ children }: { children: React.ReactNode }) {
         <Link href="/" className="brand-link">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo.png"
+            src="/logo-sm.png"
             alt="StyleUpS Logo"
-            width={40}
-            height={40}
+            width={38}
+            height={38}
             className="brand-logo"
           />
           StyleUpS
