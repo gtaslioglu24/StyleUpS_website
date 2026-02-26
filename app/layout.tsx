@@ -55,17 +55,17 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
-      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
-      { url: '/icon-512.png', type: 'image/png', sizes: '512x512' },
-    ],
-    apple: '/apple-touch-icon.png',
-  },
   alternates: {
     canonical: 'https://outfitai.app',
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico?v=2', sizes: '16x16', type: 'image/x-icon' },
+      { url: '/icon.png?v=2', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png?v=2', sizes: '180x180', type: 'image/png' },
+    ],
   },
 };
 
