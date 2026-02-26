@@ -79,7 +79,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" suppressHydrationWarning>
-      <head />
       <body className={`${headingFont.variable} ${bodyFont.variable}`}>
         <SiteChrome>{children}</SiteChrome>
       </body>
