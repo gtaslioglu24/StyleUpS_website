@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
 
+  /* ── Disable dev overlay icon indicator ── */
+  devIndicators: false,
+
   /* ── Hide framework fingerprint ── */
   poweredByHeader: false,
 
