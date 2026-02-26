@@ -60,13 +60,16 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico?v=2', sizes: '16x16', type: 'image/x-icon' },
-      { url: '/icon.png?v=2', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico?v=3', sizes: 'any', type: 'image/x-icon' },
+      { url: '/icon.png?v=3', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-192.png?v=3', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png?v=3', sizes: '512x512', type: 'image/png' },
     ],
     apple: [
-      { url: '/apple-icon.png?v=2', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-icon.png?v=3', sizes: '180x180', type: 'image/png' },
     ],
   },
+  manifest: '/manifest.webmanifest',
 };
 
 export default function RootLayout({
@@ -76,15 +79,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="48x48" />
-        <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
-        <link
-          rel="apple-touch-icon"
-          href="/apple-icon.png"
-          sizes="180x180"
-        />
-      </head>
+      <head />
       <body className={`${headingFont.variable} ${bodyFont.variable}`}>
         <SiteChrome>{children}</SiteChrome>
       </body>

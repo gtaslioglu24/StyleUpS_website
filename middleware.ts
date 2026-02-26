@@ -12,13 +12,10 @@ const MAX_REQUESTS = 60;
 
 const ipHits = new Map<string, { count: number; resetAt: number }>();
 
-// Cleanup stale entries every 5 minutes
-setInterval(() => {
-  const now = Date.now();
-  for (const [ip, data] of ipHits) {
-    if (now > data.resetAt) ipHits.delete(ip);
-  }
-}, 300_000);
+/*
+ * NOTE: setInterval is NOT reliable in serverless/edge environments (Vercel, etc.)
+ * Each cold start resets the Map. Cleanup is done inline instead.
+ */
 
 function getRateLimitResponse(): NextResponse {
   return new NextResponse(
@@ -34,13 +31,20 @@ function getRateLimitResponse(): NextResponse {
 }
 
 export function middleware(request: NextRequest) {
+  /* ── Inline cleanup of stale entries (replaces unreliable setInterval) ── */
+  const now = Date.now();
+  if (ipHits.size > 500) {
+    for (const [ip, data] of ipHits) {
+      if (now > data.resetAt) ipHits.delete(ip);
+    }
+  }
+
   /* ── Rate limiting ── */
   const ip =
     request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
     request.headers.get('x-real-ip') ??
     'unknown';
 
-  const now = Date.now();
   const entry = ipHits.get(ip);
 
   if (!entry || now > entry.resetAt) {
@@ -72,6 +76,6 @@ export const config = {
      * - _next/image (image optimization)
      * - favicon.ico
      */
-    '/((?!_next/static|_next/image|favicon\\.ico|favicon\\.png|icon\\.png|icon-.*\\.png|apple-icon\\.png|apple-touch-icon\\.png|og-image\\.png|logo.*\\.png).*)',
+    '/((?!_next/static|_next/image|favicon\\.ico|favicon\\.png|icon\\.png|icon-.*\\.png|apple-icon\\.png|apple-touch-icon\\.png|og-image\\.png|logo.*\\.png|manifest\\.webmanifest|garments/).*)',
   ],
 };
