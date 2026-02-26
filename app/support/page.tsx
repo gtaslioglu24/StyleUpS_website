@@ -5,7 +5,7 @@ import { useLanguage } from '@/components/language-context';
 const content = {
   tr: {
     title: 'Destek',
-    lead: 'Outfit AI ile ilgili her türlü soru, sorun veya geri bildirim için aşağıdaki kanalları kullanabilirsiniz.',
+    lead: 'StyleUpS ile ilgili her türlü soru, sorun veya geri bildirim için aşağıdaki kanalları kullanabilirsiniz.',
     contactTitle: 'İletişim',
     contactMail: 'support@outfitai.app',
     contactText: 'E-posta ile destek taleplerinin yanıt süresi iş günlerinde en geç 48 saattir.',
@@ -32,7 +32,7 @@ const content = {
   },
   en: {
     title: 'Support',
-    lead: 'For any questions, issues, or feedback about Outfit AI, please use the channels below.',
+    lead: 'For any questions, issues, or feedback about StyleUpS, please use the channels below.',
     contactTitle: 'Contact',
     contactMail: 'support@outfitai.app',
     contactText: 'Email support requests are typically answered within 48 hours on business days.',

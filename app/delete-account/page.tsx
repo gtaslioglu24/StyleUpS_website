@@ -5,7 +5,7 @@ import { useLanguage } from '@/components/language-context';
 const content = {
   tr: {
     title: 'Hesap Silme',
-    lead: 'Outfit AI hesabınızı ve ilişkili tüm verilerinizi kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz.',
+    lead: 'StyleUpS hesabınızı ve ilişkili tüm verilerinizi kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz.',
     stepsTitle: 'Uygulama İçi Silme Adımları',
     steps: [
       'Uygulamada Profil sekmesine gidin.',
@@ -37,7 +37,7 @@ const content = {
   },
   en: {
     title: 'Delete Account',
-    lead: 'You can permanently delete your Outfit AI account and all associated data. This action cannot be undone.',
+    lead: 'You can permanently delete your StyleUpS account and all associated data. This action cannot be undone.',
     stepsTitle: 'In-App Deletion Steps',
     steps: [
       'Go to the Profile tab in the app.',

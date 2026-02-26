@@ -5,11 +5,11 @@ import { useLanguage } from '@/components/language-context';
 const content = {
   tr: {
     title: 'Gizlilik Politikası',
-    lead: 'Son güncelleme: 25 Şubat 2026. Bu politika, Outfit AI mobil uygulamasının ("Uygulama") kişisel verileri nasıl topladığını, işlediğini, sakladığını ve koruduğunu açıklar. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Genel Veri Koruma Tüzüğü (GDPR) kapsamında veri sorumlusu olarak hareket ediyoruz.',
+    lead: 'Son güncelleme: 25 Şubat 2026. Bu politika, StyleUpS mobil uygulamasının ("Uygulama") kişisel verileri nasıl topladığını, işlediğini, sakladığını ve koruduğunu açıklar. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Genel Veri Koruma Tüzüğü (GDPR) kapsamında veri sorumlusu olarak hareket ediyoruz.',
     sections: [
       {
         title: '1. Veri Sorumlusu',
-        text: 'Outfit AI uygulamasını geliştiren ve işleten tüzel/gerçek kişi veri sorumlusudur.',
+        text: 'StyleUpS uygulamasını geliştiren ve işleten tüzel/gerçek kişi veri sorumlusudur.',
         contact: 'İletişim: privacy@outfitai.app',
       },
       {
@@ -125,11 +125,11 @@ const content = {
   },
   en: {
     title: 'Privacy Policy',
-    lead: 'Last updated: February 25, 2026. This policy explains how the Outfit AI mobile application ("App") collects, processes, stores, and protects personal data. We act as the data controller under applicable data protection laws, including the Turkish Personal Data Protection Law No. 6698 (KVKK) and the EU General Data Protection Regulation (GDPR).',
+    lead: 'Last updated: February 25, 2026. This policy explains how the StyleUpS mobile application ("App") collects, processes, stores, and protects personal data. We act as the data controller under applicable data protection laws, including the Turkish Personal Data Protection Law No. 6698 (KVKK) and the EU General Data Protection Regulation (GDPR).',
     sections: [
       {
         title: '1. Data Controller',
-        text: 'The individual or entity that develops and operates the Outfit AI application is the data controller.',
+        text: 'The individual or entity that develops and operates the StyleUpS application is the data controller.',
         contact: 'Contact: privacy@outfitai.app',
       },
       {

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Kullanım Koşulları | Outfit AI',
-  description: 'Outfit AI kullanım koşulları – App Store EULA uyumlu hizmet şartları.',
+  title: 'Kullanım Koşulları | StyleUpS',
+  description: 'StyleUpS kullanım koşulları – App Store EULA uyumlu hizmet şartları.',
   alternates: { canonical: 'https://outfitai.app/terms' },
 };
 

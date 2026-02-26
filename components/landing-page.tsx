@@ -11,7 +11,7 @@ const dictionary = {
     headline: 'Dress better, faster.',
     subHeadline: 'AI destekli seçim. Gerçek stil akışı. Premium sunum.',
     heroText:
-      'Outfit AI, gardırobunu günlük karar motoruna dönüştürür: güçlü eşleştirme, proof moderasyonu ve zarif topluluk akışı.',
+      'StyleUpS, gardırobunu günlük karar motoruna dönüştürür: güçlü eşleştirme, proof moderasyonu ve zarif topluluk akışı.',
     plansCta: 'Planları İncele',
     supportCta: 'Destek Ekibi',
     metrics: [
@@ -93,7 +93,7 @@ const dictionary = {
     headline: 'Dress better, faster.',
     subHeadline: 'AI-backed picks. Real style flow. Premium presentation.',
     heroText:
-      'Outfit AI turns your wardrobe into a daily decision engine with strong matching, proof moderation, and elegant community flow.',
+      'StyleUpS turns your wardrobe into a daily decision engine with strong matching, proof moderation, and elegant community flow.',
     plansCta: 'View Plans',
     supportCta: 'Support Team',
     metrics: [

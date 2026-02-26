@@ -16,16 +16,16 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Outfit AI | Dress Better, Faster',
+  title: 'StyleUpS | Dress Better, Faster',
   description:
-    'Outfit AI helps people build better daily looks with AI-assisted picks, proof-based sharing, and style-safe moderation.',
+    'StyleUpS helps people build better daily looks with AI-assisted picks, proof-based sharing, and style-safe moderation.',
   metadataBase: new URL('https://outfitai.app'),
   openGraph: {
-    title: 'Outfit AI | Dress Better, Faster',
+    title: 'StyleUpS | Dress Better, Faster',
     description:
       'AI-powered wardrobe management. Build better daily outfits in seconds.',
     url: 'https://outfitai.app',
-    siteName: 'Outfit AI',
+    siteName: 'StyleUpS',
     locale: 'tr_TR',
     type: 'website',
     images: [
@@ -33,13 +33,13 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Outfit AI - Dress Better, Faster',
+        alt: 'StyleUpS - Dress Better, Faster',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Outfit AI | Dress Better, Faster',
+    title: 'StyleUpS | Dress Better, Faster',
     description:
       'AI-powered wardrobe management. Build better daily outfits in seconds.',
     images: ['/og-image.png'],

@@ -1,4 +1,4 @@
-# Outfit AI Web
+# StyleUpS Web
 
 Animated marketing site + legal pages for App Store and user support.
 

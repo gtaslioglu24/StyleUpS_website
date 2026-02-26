@@ -5,11 +5,11 @@ import { useLanguage } from '@/components/language-context';
 const content = {
   tr: {
     title: 'Kullanım Koşulları',
-    lead: 'Son güncelleme: 26 Temmuz 2025. Outfit AI mobil uygulamasını ("Uygulama") kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız. Lütfen dikkatle okuyunuz.',
+    lead: 'Son güncelleme: 26 Şubat 2026. StyleUpS mobil uygulamasını ("Uygulama") kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız. Lütfen dikkatle okuyunuz.',
     sections: [
       {
         title: '1. Hizmetin Tanımı',
-        text: 'Outfit AI, kullanıcıların gardıroplarını dijital ortamda yönetmesine, yapay zekâ destekli kombin önerileri almasına ve topluluk üzerinden paylaşım yapmasına olanak tanıyan bir mobil uygulamadır. Uygulama Firebase altyapısı üzerinde çalışır; hesap doğrulaması Firebase Authentication, veri depolaması Cloud Firestore ve görsel depolaması Firebase Cloud Storage aracılığıyla gerçekleştirilir.',
+        text: 'StyleUpS, kullanıcıların gardıroplarını dijital ortamda yönetmesine, yapay zekâ destekli kombin önerileri almasına ve topluluk üzerinden paylaşım yapmasına olanak tanıyan bir mobil uygulamadır. Uygulama Firebase altyapısı üzerinde çalışır; hesap doğrulaması Firebase Authentication, veri depolaması Cloud Firestore ve görsel depolaması Firebase Cloud Storage aracılığıyla gerçekleştirilir.',
       },
       {
         title: '2. Hesap Oluşturma ve Güvenlik',
@@ -41,10 +41,10 @@ const content = {
         title: '5. Ödeme ve Abonelik Yönetimi',
         items: [
           'Premium VIP abonelikleri Apple App Store veya Google Play Store uygulama içi satın alma (IAP) altyapısı üzerinden işlenir.',
-          'Ödeme bilgileriniz Apple veya Google tarafından işlenir; Outfit AI hiçbir kredi kartı veya ödeme bilgisini toplamaz veya saklamaz.',
+          'Ödeme bilgileriniz Apple veya Google tarafından işlenir; StyleUpS hiçbir kredi kartı veya ödeme bilgisini toplamaz veya saklamaz.',
           'Abonelik, dönem bitiminden en az 24 saat önce iptal edilmediği sürece otomatik olarak yenilenir.',
           'İptal işlemi cihazınızın ayarlarındaki abonelik yönetimi bölümünden yapılır.',
-          'İade talepleri ilgili mağaza (Apple/Google) politikalarına tabidir; doğrudan Outfit AI üzerinden iade yapılamamaktadır.',
+          'İade talepleri ilgili mağaza (Apple/Google) politikalarına tabidir; doğrudan StyleUpS üzerinden iade yapılamamaktadır.',
         ],
       },
       {
@@ -89,13 +89,13 @@ const content = {
           'Proof doğrulaması ve içerik moderasyonu için OpenAI API hizmetleri kullanılır. Doğrulama fotoğraflarınız bu amaçla OpenAI sunucularına iletilir.',
           'OpenAI, Zero Data Retention (ZDR) API politikası kapsamında iletilen verileri model eğitimi için kullanmaz. Detaylar: https://openai.com/enterprise-privacy/',
           'Firebase hizmetleri (Authentication, Firestore, Cloud Storage, Cloud Functions) Google tarafından sağlanır ve Google Cloud güvenlik standartlarına tabidir.',
-          'Outfit AI, üçüncü taraf hizmet sağlayıcıların işleyişi üzerinde kontrol sahibi değildir ve bu hizmetlerin kesintisiz çalışmasını garanti edemez.',
+          'StyleUpS, üçüncü taraf hizmet sağlayıcıların işleyişi üzerinde kontrol sahibi değildir ve bu hizmetlerin kesintisiz çalışmasını garanti edemez.',
         ],
       },
       {
         title: '10. Fikri Mülkiyet',
         items: [
-          'Uygulama tasarımı, kaynak kodu, logosu, yapay zekâ modelleri ve içerikleri Outfit AI\'a aittir ve Türkiye Cumhuriyeti ve uluslararası telif hakkı kanunları ile korunmaktadır.',
+          'Uygulama tasarımı, kaynak kodu, logosu, yapay zekâ modelleri ve içerikleri StyleUpS\'a aittir ve Türkiye Cumhuriyeti ve uluslararası telif hakkı kanunları ile korunmaktadır.',
           'Yüklediğiniz kıyafet fotoğraflarının ve paylaşım görsellerinin mülkiyeti size aittir.',
           'Hizmetin sunulması (depolama, görüntüleme, AI analizi, topluluk akışında gösterim) için gerekli sınırlı, münhasır olmayan, telifsiz kullanım lisansını bize vermiş olursunuz.',
           'Bu lisans hesabınızı sildiğinizde sona erer ve tüm içeriğiniz sunucularımızdan kalıcı olarak silinir.',
@@ -133,7 +133,7 @@ const content = {
           'Önemli değişiklikler uygulama içi bildirim veya kayıtlı e-posta adresinize gönderilen mesaj ile duyurulur.',
           'Koşulların ihlali halinde hesabınız önceden bildirimde bulunulmaksızın askıya alınabilir veya kapatılabilir.',
           'Hizmeti istediğiniz zaman kullanmayı bırakabilir ve hesabınızı silebilirsiniz.',
-          'Outfit AI, herhangi bir zamanda hizmeti geçici veya kalıcı olarak durdurma hakkını saklı tutar.',
+          'StyleUpS, herhangi bir zamanda hizmeti geçici veya kalıcı olarak durdurma hakkını saklı tutar.',
         ],
       },
       {
@@ -141,10 +141,10 @@ const content = {
         items: [
           'Uygulama "olduğu gibi" (as-is) ve "mevcut haliyle" (as-available) sunulur; kesintisiz, hatasız veya güvenli çalışma garanti edilmez.',
           'AI tarafından üretilen kombin önerileri tavsiye niteliğindedir ve hiçbir şekilde profesyonel moda danışmanlığı yerine geçmez.',
-          'Firebase, OpenAI veya diğer üçüncü taraf hizmetlerdeki kesintilerden kaynaklanan aksamalardan Outfit AI sorumlu tutulamaz.',
+          'Firebase, OpenAI veya diğer üçüncü taraf hizmetlerdeki kesintilerden kaynaklanan aksamalardan StyleUpS sorumlu tutulamaz.',
           'Kullanıcıların topluluk akışına yüklediği içeriklerden içerik sahibi kullanıcı sorumludur.',
           'Kanunen izin verilen azami ölçüde, dolaylı, arızi, özel veya cezai zararlardan sorumluluk kabul edilmez.',
-          'Outfit AI\'ın toplam sorumluluğu, son 12 ayda ödediğiniz abonelik tutarını veya 100 ABD Doları\'ndan düşük olanını aşamaz.',
+          'StyleUpS\'ın toplam sorumluluğu, son 12 ayda ödediğiniz abonelik tutarını veya 100 ABD Doları\'ndan düşük olanını aşamaz.',
         ],
       },
       {
@@ -156,11 +156,11 @@ const content = {
   },
   en: {
     title: 'Terms of Use',
-    lead: 'Last updated: July 26, 2025. By using the Outfit AI mobile application ("App"), you agree to the following terms. Please read carefully.',
+    lead: 'Last updated: February 26, 2026. By using the StyleUpS mobile application ("App"), you agree to the following terms. Please read carefully.',
     sections: [
       {
         title: '1. Service Description',
-        text: 'Outfit AI is a mobile application that enables users to manage their wardrobe digitally, receive AI-powered outfit suggestions, and share outfits through a community feed. The App runs on Firebase infrastructure; account authentication is handled by Firebase Authentication, data storage by Cloud Firestore, and image storage by Firebase Cloud Storage.',
+        text: 'StyleUpS is a mobile application that enables users to manage their wardrobe digitally, receive AI-powered outfit suggestions, and share outfits through a community feed. The App runs on Firebase infrastructure; account authentication is handled by Firebase Authentication, data storage by Cloud Firestore, and image storage by Firebase Cloud Storage.',
       },
       {
         title: '2. Account Creation and Security',
@@ -192,10 +192,10 @@ const content = {
         title: '5. Billing and Subscription Management',
         items: [
           'Premium VIP subscriptions are processed through Apple App Store or Google Play Store in-app purchase (IAP) infrastructure.',
-          'Payment information is processed by Apple or Google; Outfit AI does not collect or store any credit card or payment data.',
+          'Payment information is processed by Apple or Google; StyleUpS does not collect or store any credit card or payment data.',
           'Subscriptions auto-renew unless canceled at least 24 hours before the current period ends.',
           'Cancellation is managed through the subscription management section in your device settings.',
-          'Refund requests are subject to the respective store (Apple/Google) policies; refunds cannot be processed directly through Outfit AI.',
+          'Refund requests are subject to the respective store (Apple/Google) policies; refunds cannot be processed directly through StyleUpS.',
         ],
       },
       {
@@ -240,13 +240,13 @@ const content = {
           'OpenAI API services are used for proof verification and content moderation. Your verification photos are transmitted to OpenAI servers for this purpose.',
           'Under OpenAI\'s Zero Data Retention (ZDR) API policy, transmitted data is not used for model training. Details: https://openai.com/enterprise-privacy/',
           'Firebase services (Authentication, Firestore, Cloud Storage, Cloud Functions) are provided by Google and are subject to Google Cloud security standards.',
-          'Outfit AI does not have control over the operation of third-party service providers and cannot guarantee their uninterrupted availability.',
+          'StyleUpS does not have control over the operation of third-party service providers and cannot guarantee their uninterrupted availability.',
         ],
       },
       {
         title: '10. Intellectual Property',
         items: [
-          'The App design, source code, logo, AI models, and content are owned by Outfit AI and protected under the laws of the Republic of Turkey and international copyright laws.',
+          'The App design, source code, logo, AI models, and content are owned by StyleUpS and protected under the laws of the Republic of Turkey and international copyright laws.',
           'You retain ownership of garment photos and post images you upload.',
           'You grant us a limited, non-exclusive, royalty-free license to use your content as necessary for service delivery (storage, display, AI analysis, community feed display).',
           'This license terminates when you delete your account, and all your content is permanently removed from our servers.',
@@ -284,7 +284,7 @@ const content = {
           'Significant changes will be communicated via in-app notification or a message sent to your registered email address.',
           'Your account may be suspended or terminated without prior notice in case of terms violation.',
           'You may stop using the service and delete your account at any time.',
-          'Outfit AI reserves the right to temporarily or permanently discontinue the service at any time.',
+          'StyleUpS reserves the right to temporarily or permanently discontinue the service at any time.',
         ],
       },
       {
@@ -292,10 +292,10 @@ const content = {
         items: [
           'The App is provided "as is" and "as available"; uninterrupted, error-free, or secure operation is not guaranteed.',
           'AI-generated outfit suggestions are advisory only and do not in any way replace professional fashion consultation.',
-          'Outfit AI shall not be held liable for disruptions caused by outages in Firebase, OpenAI, or other third-party services.',
+          'StyleUpS shall not be held liable for disruptions caused by outages in Firebase, OpenAI, or other third-party services.',
           'Users are responsible for content they upload to the community feed.',
           'To the maximum extent permitted by law, we are not liable for indirect, incidental, special, or punitive damages.',
-          'Outfit AI\'s total liability shall not exceed the lesser of subscription fees paid by you in the last 12 months or USD 100.',
+          'StyleUpS\'s total liability shall not exceed the lesser of subscription fees paid by you in the last 12 months or USD 100.',
         ],
       },
       {

@@ -52,14 +52,14 @@ function SiteChromeInner({ children }: { children: React.ReactNode }) {
         <Link href="/" className="brand-link">
           <Image
             src="/logo.png"
-            alt="Outfit AI Logo"
+            alt="StyleUpS Logo"
             width={40}
             height={40}
             className="brand-logo"
             unoptimized
             priority
           />
-          Outfit AI
+          StyleUpS
         </Link>
 
         <div className="header-right">
@@ -105,7 +105,7 @@ function SiteChromeInner({ children }: { children: React.ReactNode }) {
 
       <footer className="site-footer">
         <p>
-          © {new Date().getFullYear()} Outfit AI. {t('Tüm hakları saklıdır.', 'All rights reserved.')}
+          © {new Date().getFullYear()} StyleUpS. {t('Tüm hakları saklıdır.', 'All rights reserved.')}
         </p>
         <div className="footer-links">
           <Link href="/privacy">{t('Gizlilik Politikası', 'Privacy Policy')}</Link>
