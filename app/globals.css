@@ -56,6 +56,14 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  color-scheme: dark;
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
+}
+
 body {
   font-family: var(--font-body), 'Avenir Next', 'Segoe UI', sans-serif;
   color: var(--text);
@@ -246,6 +254,19 @@ button {
 .footer-links a {
   color: var(--text);
   opacity: 0.9;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.footer-copy-main,
+.footer-copy-sub {
+  display: block;
+}
+
+.footer-copy-sub {
+  margin-top: 8px;
 }
 
 .landing-root {

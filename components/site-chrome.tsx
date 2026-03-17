@@ -7,12 +7,10 @@ import { LanguageProvider, useLanguage } from '@/components/language-context';
 type ThemeMode = 'light' | 'dark';
 
 const getInitialTheme = (): ThemeMode => {
-  if (typeof window === 'undefined') return 'light';
+  if (typeof window === 'undefined') return 'dark';
   const saved = window.localStorage.getItem('site-theme');
   if (saved === 'light' || saved === 'dark') return saved;
-
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  return prefersDark ? 'dark' : 'light';
+  return 'dark';
 };
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {
@@ -24,7 +22,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
 }
 
 function SiteChromeInner({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<ThemeMode>('light');
+  const [theme, setTheme] = useState<ThemeMode>('dark');
   const [mounted, setMounted] = useState(false);
   const { language, setLanguage } = useLanguage();
 
@@ -103,7 +101,12 @@ function SiteChromeInner({ children }: { children: React.ReactNode }) {
 
       <footer className="site-footer">
         <p>
-          © {new Date().getFullYear()} StyleUpS. {t('Tüm hakları saklıdır.', 'All rights reserved.')}
+          <span className="footer-copy-main">
+            © {new Date().getFullYear()} StyleUpS. {t('Tüm hakları saklıdır.', 'All rights reserved.')}
+          </span>
+          <span className="footer-copy-sub">
+            {t('StyleUpS bir Skymoon Studios ürünüdür.', 'StyleUpS is a Skymoon Studios product.')}
+          </span>
         </p>
         <div className="footer-links">
           <Link href="/privacy">{t('Gizlilik Politikası', 'Privacy Policy')}</Link>

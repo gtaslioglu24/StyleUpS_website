@@ -15,70 +15,67 @@ const bodyFont = Plus_Jakarta_Sans({
   weight: ['400', '500', '600', '700'],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+
 export const metadata: Metadata = {
   title: 'StyleUpS | Dress Better, Faster',
   description:
     'StyleUpS helps people build better daily looks with AI-assisted picks, proof-based sharing, and style-safe moderation.',
-  metadataBase: new URL('https://outfitai.app'),
+  metadataBase: new URL(siteUrl),
+
   openGraph: {
     title: 'StyleUpS | Dress Better, Faster',
     description:
       'AI-powered wardrobe management. Build better daily outfits in seconds.',
-    url: 'https://outfitai.app',
+    url: siteUrl,
     siteName: 'StyleUpS',
     locale: 'tr_TR',
     type: 'website',
     images: [
       {
-        url: '/og-image.png?v=10',
+        url: '/og-image.png?v=99',
         width: 1200,
         height: 630,
         alt: 'StyleUpS - Dress Better, Faster',
       },
     ],
   },
+
   twitter: {
     card: 'summary_large_image',
     title: 'StyleUpS | Dress Better, Faster',
     description:
       'AI-powered wardrobe management. Build better daily outfits in seconds.',
-    images: ['/og-image.png?v=10'],
+    images: ['/og-image.png?v=99'],
   },
+
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
+
   alternates: {
-    canonical: 'https://outfitai.app',
+    canonical: '/',
   },
+
+  // Canonical favicon setup
   icons: {
-    icon: [
-      { url: '/favicon.ico?v=14', sizes: 'any', type: 'image/x-icon' },
-      { url: '/icon.png?v=14', sizes: '32x32', type: 'image/png' },
-      { url: '/icon-192.png?v=14', sizes: '192x192', type: 'image/png' },
-      { url: '/icon-512.png?v=14', sizes: '512x512', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-icon.png?v=14', sizes: '180x180', type: 'image/png' },
-    ],
+    icon: [{ url: '/favicon.ico?v=3004', sizes: 'any', type: 'image/x-icon' }],
+    shortcut: '/favicon.ico?v=3004',
+    apple: [{ url: '/apple-icon.png?v=3004', sizes: '180x180', type: 'image/png' }],
   },
+
   manifest: '/manifest.webmanifest',
+  themeColor: '#150f0e',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="tr" suppressHydrationWarning>
+    <html lang="tr" data-theme="dark" suppressHydrationWarning>
       <body className={`${headingFont.variable} ${bodyFont.variable}`}>
         <SiteChrome>{children}</SiteChrome>
       </body>
