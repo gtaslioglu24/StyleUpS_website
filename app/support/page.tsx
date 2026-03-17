@@ -7,7 +7,7 @@ const content = {
     title: 'Destek',
     lead: 'StyleUpS ile ilgili her türlü soru, sorun veya geri bildirim için aşağıdaki kanalları kullanabilirsiniz.',
     contactTitle: 'İletişim',
-    contactMail: 'support@outfitai.app',
+    contactMail: 'contact@skymoonstudios.com',
     contactText: 'E-posta ile destek taleplerinin yanıt süresi iş günlerinde en geç 48 saattir.',
     detailsTitle: 'Destek Talebine Eklenecek Bilgiler',
     details: [
@@ -24,7 +24,7 @@ const content = {
       'Gardırop ve kombin: fotoğraf yükleme hataları, AI öneri sorunları.',
       'Topluluk ve moderasyon: içerik kaldırma itirazı, kullanıcı raporlama.',
       'Teknik sorunlar: uygulama çökmeleri, performans düşüklüğü, senkronizasyon hataları.',
-      'Gizlilik ve veri: KVKK kapsamında veri erişim/silme talepleri (privacy@outfitai.app adresine yönlendirilir).',
+      'Gizlilik ve veri: KVKK kapsamında veri erişim/silme talepleri (contact@skymoonstudios.com adresine yönlendirilir).',
     ],
     abuseTitle: 'Güvenlik ve Acil Durumlar',
     abuseText:
@@ -34,7 +34,7 @@ const content = {
     title: 'Support',
     lead: 'For any questions, issues, or feedback about StyleUpS, please use the channels below.',
     contactTitle: 'Contact',
-    contactMail: 'support@outfitai.app',
+    contactMail: 'contact@skymoonstudios.com',
     contactText: 'Email support requests are typically answered within 48 hours on business days.',
     detailsTitle: 'Information to Include in Your Request',
     details: [
@@ -51,7 +51,7 @@ const content = {
       'Wardrobe and outfits: photo upload errors, AI suggestion issues.',
       'Community and moderation: content removal appeals, user reporting.',
       'Technical issues: app crashes, performance problems, sync errors.',
-      'Privacy and data: data access/deletion requests under KVKK (redirected to privacy@outfitai.app).',
+      'Privacy and data: data access/deletion requests under KVKK (redirected to contact@skymoonstudios.com).',
     ],
     abuseTitle: 'Security and Emergencies',
     abuseText:

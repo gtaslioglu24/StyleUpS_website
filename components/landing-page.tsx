@@ -70,12 +70,6 @@ const dictionary = {
         price: 'Referans ödülü',
         note: 'Her 5 başarılı davette 1 ay Davetli süresi eklenir.',
       },
-      {
-        name: 'Premium VIP',
-        limits: '80 parça · günde 20 kombin · günde 3 paylaşım',
-        price: '$5/ay · $40/yıl',
-        note: 'Yıllık pakette yaklaşık %33 tasarruf.',
-      },
     ],
     finalTitle: 'App Store ve kampanya trafiği için yayına hazır.',
     finalText:
@@ -152,12 +146,6 @@ const dictionary = {
         limits: '40 pieces · 5 outfits/day · 2 shares/day',
         price: 'Referral reward',
         note: 'Every 5 successful referrals adds 1 month invite access.',
-      },
-      {
-        name: 'Premium VIP',
-        limits: '80 pieces · 20 outfits/day · 3 shares/day',
-        price: '$5/mo · $40/yr',
-        note: 'Yearly package saves about 33%.',
       },
     ],
     finalTitle: 'Launch-ready for App Store pages and campaign traffic.',
@@ -352,7 +340,7 @@ export function LandingPage() {
           {c.plans.map((plan) => (
             <motion.article
               key={plan.name}
-              className={`plan-card ${plan.name === 'Premium VIP' ? 'is-featured' : ''}`}
+              className="plan-card"
               variants={card}
             >
               <h3>{plan.name}</h3>

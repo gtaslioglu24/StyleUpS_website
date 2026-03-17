@@ -1,0 +1,10 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Fix Icons Task",
+			"type": "shell",
+			"command": "python3 fix_icons.py"
+		}
+	]
+}

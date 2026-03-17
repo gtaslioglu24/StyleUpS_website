@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.png?v=10',
         width: 1200,
         height: 630,
         alt: 'StyleUpS - Dress Better, Faster',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: 'StyleUpS | Dress Better, Faster',
     description:
       'AI-powered wardrobe management. Build better daily outfits in seconds.',
-    images: ['/og-image.png'],
+    images: ['/og-image.png?v=10'],
   },
   robots: {
     index: true,
@@ -60,13 +60,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico?v=3', sizes: 'any', type: 'image/x-icon' },
-      { url: '/icon.png?v=3', sizes: '32x32', type: 'image/png' },
-      { url: '/icon-192.png?v=3', sizes: '192x192', type: 'image/png' },
-      { url: '/icon-512.png?v=3', sizes: '512x512', type: 'image/png' },
+      { url: '/favicon.ico?v=12', sizes: 'any', type: 'image/x-icon' },
+      { url: '/icon.png?v=12', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-192.png?v=12', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png?v=12', sizes: '512x512', type: 'image/png' },
     ],
     apple: [
-      { url: '/apple-icon.png?v=3', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-icon.png?v=12', sizes: '180x180', type: 'image/png' },
     ],
   },
   manifest: '/manifest.webmanifest',

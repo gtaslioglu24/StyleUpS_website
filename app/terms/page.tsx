@@ -19,7 +19,7 @@ const content = {
           'Görünen ad (display name) en fazla 15 karakter olabilir ve diğer kullanıcılar tarafından görülür.',
           'Hesap güvenliğinizden (şifre gizliliği, oturum yönetimi) siz sorumlusunuz.',
           'Hesabınız üzerinden gerçekleşen tüm işlemlerden kullanıcı olarak siz sorumlusunuz.',
-          'Hesabınıza yetkisiz erişim fark ettiğinizde derhal support@outfitai.app adresine bildirmelisiniz.',
+          'Hesabınıza yetkisiz erişim fark ettiğinizde derhal contact@skymoonstudios.com adresine bildirmelisiniz.',
         ],
       },
       {
@@ -79,7 +79,7 @@ const content = {
           'Kullanıcılar uygunsuz buldukları içerikleri sebep belirterek rapor edebilir. Raporlar Firestore\'da saklanır ve incelenir.',
           'Kullanıcılar diğer kullanıcıları engelleyebilir; engellenen kullanıcının paylaşımları görünmez olur.',
           'Politika ihlalinde içerik kaldırılabilir, hesap geçici veya kalıcı olarak kısıtlanabilir.',
-          'İçerik kaldırma veya hesap kısıtlama kararlarına support@outfitai.app üzerinden itiraz edilebilir.',
+          'İçerik kaldırma veya hesap kısıtlama kararlarına contact@skymoonstudios.com üzerinden itiraz edilebilir.',
         ],
       },
       {
@@ -150,7 +150,7 @@ const content = {
       {
         title: '16. Uygulanacak Hukuk ve Uyuşmazlık Çözümü',
         text: 'Bu koşullar Türkiye Cumhuriyeti hukukuna tabidir. Uyuşmazlıklarda İstanbul (Anadolu) mahkemeleri ve icra daireleri yetkilidir. Avrupa Birliği\'nde ikamet eden kullanıcılar için zorunlu tüketici koruma hükümleri saklıdır.',
-        contact: 'Genel destek: support@outfitai.app · Hukuki konular: legal@outfitai.app',
+        contact: 'Genel destek: contact@skymoonstudios.com · Hukuki konular: contact@skymoonstudios.com',
       },
     ],
   },
@@ -170,7 +170,7 @@ const content = {
           'Display names are limited to 15 characters and are visible to other users.',
           'You are responsible for maintaining the security of your account (password confidentiality, session management).',
           'You are responsible for all activities that occur under your account.',
-          'You must immediately notify support@outfitai.app if you detect unauthorized access to your account.',
+          'You must immediately notify contact@skymoonstudios.com if you detect unauthorized access to your account.',
         ],
       },
       {
@@ -230,7 +230,7 @@ const content = {
           'Users may report content they find inappropriate by providing a reason. Reports are stored in Firestore and reviewed.',
           'Users may block other users; blocked users\' posts become invisible.',
           'Policy violations may result in content removal and temporary or permanent account restrictions.',
-          'Content removal or account restriction decisions can be appealed via support@outfitai.app.',
+          'Content removal or account restriction decisions can be appealed via contact@skymoonstudios.com.',
         ],
       },
       {
@@ -301,7 +301,7 @@ const content = {
       {
         title: '16. Governing Law and Dispute Resolution',
         text: 'These terms are governed by the laws of the Republic of Turkey. The courts and enforcement offices of Istanbul (Anadolu) shall have jurisdiction over any disputes. Mandatory consumer protection provisions for users residing in the European Union are reserved.',
-        contact: 'General support: support@outfitai.app · Legal matters: legal@outfitai.app',
+        contact: 'General support: contact@skymoonstudios.com · Legal matters: contact@skymoonstudios.com',
       },
     ],
   },

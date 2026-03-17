@@ -10,7 +10,7 @@ const content = {
       {
         title: '1. Veri Sorumlusu',
         text: 'StyleUpS uygulamasını geliştiren ve işleten tüzel/gerçek kişi veri sorumlusudur.',
-        contact: 'İletişim: privacy@outfitai.app',
+        contact: 'İletişim: contact@skymoonstudios.com',
       },
       {
         title: '2. Toplanan Kişisel Veriler',
@@ -97,11 +97,11 @@ const content = {
       },
       {
         title: '11. Çocukların Gizliliği',
-        text: 'Uygulama 13 yaşın altındaki kullanıcılara yönelik değildir ve bilinçli olarak 13 yaşın altındaki bireylerden kişisel veri toplamaz. 13 yaşın altında bir kullanıcının veri paylaştığını fark etmemiz halinde ilgili hesap ve veriler en kısa sürede silinir. Ebeveynler veya yasal vasiler bu durumu privacy@outfitai.app adresine bildirerek silme talep edebilir.',
+        text: 'Uygulama 13 yaşın altındaki kullanıcılara yönelik değildir ve bilinçli olarak 13 yaşın altındaki bireylerden kişisel veri toplamaz. 13 yaşın altında bir kullanıcının veri paylaştığını fark etmemiz halinde ilgili hesap ve veriler en kısa sürede silinir. Ebeveynler veya yasal vasiler bu durumu contact@skymoonstudios.com adresine bildirerek silme talep edebilir.',
       },
       {
         title: '12. KVKK ve GDPR Kapsamındaki Haklarınız',
-        text: 'Aşağıdaki haklarınızı kullanmak için privacy@outfitai.app adresine başvurabilirsiniz:',
+        text: 'Aşağıdaki haklarınızı kullanmak için contact@skymoonstudios.com adresine başvurabilirsiniz:',
         items: [
           'Kişisel verilerinizin işlenip işlenmediğini öğrenme.',
           'İşlenmişse buna ilişkin bilgi talep etme.',
@@ -115,7 +115,7 @@ const content = {
           'Verilerinizin taşınabilirliğini talep etme (GDPR m.20).',
           'İşlemenin kısıtlanmasını isteme (GDPR m.18).',
         ],
-        contact: 'Başvuru adresi: privacy@outfitai.app — Talepler en geç 30 gün içinde yanıtlanır.',
+        contact: 'Başvuru adresi: contact@skymoonstudios.com — Talepler en geç 30 gün içinde yanıtlanır.',
       },
       {
         title: '13. Politika Değişiklikleri',
@@ -130,7 +130,7 @@ const content = {
       {
         title: '1. Data Controller',
         text: 'The individual or entity that develops and operates the StyleUpS application is the data controller.',
-        contact: 'Contact: privacy@outfitai.app',
+        contact: 'Contact: contact@skymoonstudios.com',
       },
       {
         title: '2. Personal Data We Collect',
@@ -217,11 +217,11 @@ const content = {
       },
       {
         title: '11. Children\'s Privacy',
-        text: 'The App is not intended for users under the age of 13 and does not knowingly collect personal data from individuals under 13. If we become aware that a user under 13 has shared personal data, the relevant account and data will be deleted as soon as possible. Parents or legal guardians may request deletion by contacting privacy@outfitai.app.',
+        text: 'The App is not intended for users under the age of 13 and does not knowingly collect personal data from individuals under 13. If we become aware that a user under 13 has shared personal data, the relevant account and data will be deleted as soon as possible. Parents or legal guardians may request deletion by contacting contact@skymoonstudios.com.',
       },
       {
         title: '12. Your Rights Under KVKK and GDPR',
-        text: 'You may exercise the following rights by contacting privacy@outfitai.app:',
+        text: 'You may exercise the following rights by contacting contact@skymoonstudios.com:',
         items: [
           'Learn whether your personal data is being processed.',
           'Request information about processing activities.',
@@ -235,7 +235,7 @@ const content = {
           'Request data portability (GDPR Article 20).',
           'Request restriction of processing (GDPR Article 18).',
         ],
-        contact: 'Contact: privacy@outfitai.app — Requests are responded to within 30 days.',
+        contact: 'Contact: contact@skymoonstudios.com — Requests are responded to within 30 days.',
       },
       {
         title: '13. Policy Changes',

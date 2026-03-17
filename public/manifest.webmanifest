@@ -4,8 +4,8 @@
   "description": "Dress Better, Faster — AI-powered wardrobe management.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f4effa",
-  "theme_color": "#7a56a0",
+  "background_color": "#f7efe5",
+  "theme_color": "#9c5d49",
   "icons": [
     {
       "src": "/icon-192.png",

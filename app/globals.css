@@ -1,45 +1,45 @@
 :root {
-  --bg: #f4effa;
-  --bg-muted: #ede2f7;
-  --card: #fbf8ff;
-  --card-alt: #f3ebfa;
-  --text: #2c1f3d;
-  --text-sub: #75628d;
-  --accent: #7a56a0;
-  --accent-strong: #5f3f83;
+  --bg: #f7efe5;
+  --bg-muted: #f1e3d4;
+  --card: #fff9f2;
+  --card-alt: #f7ebde;
+  --text: #2f1f1d;
+  --text-sub: #7a625a;
+  --accent: #9c5d49;
+  --accent-strong: #703b31;
   --on-accent: #ffffff;
-  --border: #d8cbe8;
+  --border: #e4d4c2;
   --danger: #e65f85;
 
-  --ambient-a: rgba(122, 86, 160, 0.2);
-  --ambient-b: rgba(95, 63, 131, 0.15);
-  --ambient-c: rgba(122, 86, 160, 0.08);
-  --header-bg: rgba(251, 248, 255, 0.74);
-  --panel-bg: linear-gradient(140deg, rgba(255, 255, 255, 0.8), rgba(243, 235, 250, 0.75));
-  --chip-bg: rgba(237, 226, 247, 0.9);
-  --shadow: 0 28px 80px rgba(95, 63, 131, 0.18);
-  --shadow-soft: 0 14px 40px rgba(95, 63, 131, 0.12);
+  --ambient-a: rgba(156, 93, 73, 0.2);
+  --ambient-b: rgba(112, 59, 49, 0.14);
+  --ambient-c: rgba(88, 46, 34, 0.2);
+  --header-bg: rgba(255, 249, 242, 0.76);
+  --panel-bg: linear-gradient(140deg, rgba(255, 255, 255, 0.82), rgba(247, 235, 222, 0.78));
+  --chip-bg: rgba(241, 227, 212, 0.9);
+  --shadow: 0 28px 80px rgba(112, 59, 49, 0.18);
+  --shadow-soft: 0 14px 40px rgba(112, 59, 49, 0.12);
 }
 
 html[data-theme='dark'] {
-  --bg: #120f19;
-  --bg-muted: #1b1526;
-  --card: #1d1728;
-  --card-alt: #271e36;
-  --text: #f3ecfa;
-  --text-sub: #b8aacb;
-  --accent: #b79ad1;
-  --accent-strong: #a37bc5;
-  --on-accent: #1d1329;
-  --border: #3b2f4e;
+  --bg: #150f0e;
+  --bg-muted: #211715;
+  --card: #241a18;
+  --card-alt: #2f211f;
+  --text: #f8ede5;
+  --text-sub: #c9afa4;
+  --accent: #d8a88f;
+  --accent-strong: #c48668;
+  --on-accent: #1c110f;
+  --border: #4a342f;
   --danger: #e65f85;
 
-  --ambient-a: rgba(183, 154, 209, 0.2);
-  --ambient-b: rgba(163, 123, 197, 0.15);
-  --ambient-c: rgba(183, 154, 209, 0.09);
-  --header-bg: rgba(24, 19, 34, 0.72);
-  --panel-bg: linear-gradient(140deg, rgba(35, 27, 50, 0.82), rgba(23, 18, 33, 0.7));
-  --chip-bg: rgba(38, 31, 53, 0.9);
+  --ambient-a: rgba(216, 168, 143, 0.2);
+  --ambient-b: rgba(196, 134, 104, 0.15);
+  --ambient-c: rgba(216, 168, 143, 0.09);
+  --header-bg: rgba(30, 21, 19, 0.74);
+  --panel-bg: linear-gradient(140deg, rgba(45, 31, 28, 0.84), rgba(28, 20, 18, 0.72));
+  --chip-bg: rgba(53, 38, 34, 0.9);
   --shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
   --shadow-soft: 0 15px 42px rgba(0, 0, 0, 0.3);
 }
