@@ -162,20 +162,7 @@ const dictionary = {
   },
 } as const;
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
-};
 
-const card = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0 },
-};
 
 export function LandingPage() {
   const { language } = useLanguage();
@@ -277,20 +264,21 @@ export function LandingPage() {
           {c.section1Title}
         </motion.h2>
 
-        <motion.div
-          className="grid-three"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {c.features.map((item) => (
-            <motion.article key={item.title} className="info-card" variants={card}>
+        <div className="grid-three">
+          {c.features.map((item, i) => (
+            <motion.article 
+              key={item.title} 
+              className="info-card" 
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+              transition={{ duration: 0.5, delay: i * 0.12 }}
+            >
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </motion.article>
           ))}
-        </motion.div>
+        </div>
       </section>
 
       <section className="section-block">
@@ -303,21 +291,22 @@ export function LandingPage() {
           {c.section2Title}
         </motion.h2>
 
-        <motion.div
-          className="grid-three"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {c.flow.map((item) => (
-            <motion.article key={item.step} className="flow-card" variants={card}>
+        <div className="grid-three">
+          {c.flow.map((item, i) => (
+            <motion.article 
+              key={item.step} 
+              className="flow-card" 
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+              transition={{ duration: 0.5, delay: i * 0.12 }}
+            >
               <span>{item.step}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </motion.article>
           ))}
-        </motion.div>
+        </div>
       </section>
 
       <section className="section-block" id="plans">
@@ -330,18 +319,15 @@ export function LandingPage() {
           {c.section3Title}
         </motion.h2>
 
-        <motion.div
-          className="grid-three"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {c.plans.map((plan) => (
+        <div className="grid-three">
+          {c.plans.map((plan, i) => (
             <motion.article
               key={plan.name}
               className="plan-card"
-              variants={card}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+              transition={{ duration: 0.5, delay: i * 0.12 }}
             >
               <h3>{plan.name}</h3>
               <p className="plan-price">{plan.price}</p>
@@ -349,7 +335,7 @@ export function LandingPage() {
               <p>{plan.note}</p>
             </motion.article>
           ))}
-        </motion.div>
+        </div>
       </section>
 
       <motion.section
