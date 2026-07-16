@@ -5,7 +5,7 @@ import { useLanguage } from '@/components/language-context';
 const content = {
   tr: {
     title: 'Gizlilik Politikası',
-    lead: 'Son güncelleme: 25 Şubat 2026. Bu politika, StyleUpS mobil uygulamasının ("Uygulama") kişisel verileri nasıl topladığını, işlediğini, sakladığını ve koruduğunu açıklar. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Genel Veri Koruma Tüzüğü (GDPR) kapsamında veri sorumlusu olarak hareket ediyoruz.',
+    lead: 'Son güncelleme: 16 Temmuz 2026. Bu politika, StyleUpS mobil uygulamasının ("Uygulama") kişisel verileri nasıl topladığını, işlediğini, sakladığını ve koruduğunu açıklar. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Genel Veri Koruma Tüzüğü (GDPR) kapsamında veri sorumlusu olarak hareket ediyoruz.',
     sections: [
       {
         title: '1. Veri Sorumlusu',
@@ -19,6 +19,7 @@ const content = {
           'Kimlik ve hesap verileri: e-posta adresi, kullanıcı tarafından belirlenen görüntü adı (display name, maks. 15 karakter), Firebase tarafından oluşturulan benzersiz kullanıcı kimliği (UID).',
           'Gardırop verileri: yüklenen kıyafet fotoğrafları, kıyafet kategorisi (üst, alt, ayakkabı, dış giyim), renk bilgisi ve stil etiketi. Bu veriler Firebase Cloud Storage ve Firestore\'da saklanır.',
           'Topluluk paylaşım verileri: selfie fotoğrafı (kamera ile çekilir), seçilen kombin bilgileri (kıyafet görselleri, renkler, stiller), kullanıcı adı. Paylaşımlar tüm oturum açmış kullanıcılara görünür olarak Firestore\'da saklanır.',
+          'Stil Arenası verileri: oluşturduğun yüz içermeyen "fit kartları" (kombin görselleri, renkler, stiller), fit kartının rütbesi/puanı/kazanma-kaybetme kaydı, verdiğin oylar ve görünen kullanıcı adın. Fit kartların ve lig sıralaman diğer kullanıcılara açık gösterilir; oy verme işlemi anonimdir.',
           'Etkileşim verileri: beğeniler yalnızca cihazınızda (AsyncStorage) saklanır; sunucuya yalnızca anonim beğeni sayacı gönderilir. Bireysel beğeni kaydı sunucuda tutulmaz.',
           'Moderasyon verileri: kullanıcı raporları (sebep, raporlayan UID, raporlanan kullanıcı UID, paylaşım ID), engelleme kayıtları (engelleyen UID, engellenen UID).',
           'Kullanım verileri: günlük kombin üretim sayısı, günlük paylaşım sayısı, referans kodu. Bu bilgiler plan limitlerinin uygulanması için saklanır.',
@@ -50,8 +51,8 @@ const content = {
         items: [
           'Hesap oluşturma ve kimlik doğrulama (Firebase Authentication) — sözleşmenin ifası.',
           'Dijital gardırop yönetimi ve AI destekli kombin önerileri sunma — sözleşmenin ifası ve meşru menfaat.',
-          'Topluluk paylaşımlarının proof doğrulaması: selfie fotoğrafınız ve belirtilen kıyafet bilgileri, paylaşımın gerçek bir kombin olduğunu doğrulamak için OpenAI API\'sine gönderilir — meşru menfaat ve hizmet kalitesi.',
-          'İçerik moderasyonu: selfie fotoğrafları OpenAI Moderation API ile uygunsuz içerik taramasından geçirilir — hukuki yükümlülük ve topluluk güvenliği.',
+          'Topluluk paylaşımlarının proof özelliği: paylaşım sırasında çekilen selfie, paylaşımın gerçek bir kombine ait olduğunu göstermek amacıyla saklanır ve yayınlanmadan önce güvenlik taramasından geçirilir — meşru menfaat ve hizmet kalitesi.',
+          'İçerik moderasyonu: paylaşılan ve arenaya giren tüm görseller, yayınlanmadan önce Google Cloud Vision SafeSearch ile otomatik olarak denetlenir; şiddet, nefret söylemi, cinsel veya tehlikeli içerik işaretleri taşıyan içerik engellenir — hukuki yükümlülük ve topluluk güvenliği.',
           'Plan limitlerinin uygulanması (günlük kombin/paylaşım kotaları) — sözleşmenin ifası.',
           'Kullanıcı raporları ve engellemelerin işlenmesi — hukuki yükümlülük ve topluluk güvenliği.',
           'Referans sistemi yönetimi — meşru menfaat.',
@@ -62,20 +63,20 @@ const content = {
         text: 'Verileriniz aşağıdaki üçüncü taraf hizmet sağlayıcılarla paylaşılır:',
         items: [
           'Firebase (Google LLC): kimlik doğrulama (Firebase Auth), veritabanı (Firestore), dosya depolama (Cloud Storage), sunucu tarafı işlevler (Cloud Functions). Google gizlilik politikası: https://policies.google.com/privacy',
-          'OpenAI (OpenAI LLC): topluluk paylaşımlarındaki selfie fotoğrafları, proof doğrulaması ve içerik moderasyonu amacıyla OpenAI sunucularına gönderilir. Gönderilen veriler: selfie görsel URL\'si ve beklenen kıyafet renk/stil bilgileri. OpenAI gizlilik politikası: https://openai.com/policies/privacy-policy',
+          'Google Cloud Vision (Google LLC): paylaşılan ve arenaya giren görseller, içerik moderasyonu (SafeSearch) amacıyla Google Cloud Vision servisine gönderilir. İşleme, uygulamanın Google Cloud servis hesabı üzerinden gerçekleşir. Google gizlilik politikası: https://policies.google.com/privacy',
           'Firebase App Check (ReCAPTCHA v3, yalnızca web): bot koruması amacıyla tarayıcı parmak izi verileri Google\'a gönderilir.',
         ],
       },
       {
         title: '7. Uluslararası Veri Transferi',
-        text: 'Firebase altyapısı nedeniyle kişisel veriler ABD veya Avrupa Ekonomik Alanı (AEA) bölgesindeki sunucularda işlenebilir. OpenAI sunucuları ABD\'de yer almaktadır. Bu transferler, KVKK m.9 ve GDPR 46. madde kapsamında yeterli koruma tedbirleri (standart sözleşme maddeleri) çerçevesinde gerçekleştirilir.',
+        text: 'Firebase ve Google Cloud altyapısı nedeniyle kişisel veriler ABD veya Avrupa Ekonomik Alanı (AEA) bölgesindeki sunucularda işlenebilir. Bu transferler, KVKK m.9 ve GDPR 46. madde kapsamında yeterli koruma tedbirleri (standart sözleşme maddeleri) çerçevesinde gerçekleştirilir.',
       },
       {
         title: '8. Veri Saklama ve Silme',
         text: 'Verileriniz aşağıdaki sürelerde saklanır ve silinir:',
         items: [
           'Hesap verileri: hesap aktif olduğu sürece saklanır. Hesap silme talebinde tüm veriler tek seferde silinir.',
-          'Hesap silme kapsamı: profil bilgileri (Firestore kullanıcı dokümanı), tüm gardırop öğeleri ve fotoğrafları (Firestore + Cloud Storage), tüm topluluk paylaşımları ve fotoğrafları (Firestore + Cloud Storage), tüm engelleme kayıtları, Firebase Authentication kaydı kalıcı olarak silinir.',
+          'Hesap silme kapsamı: profil bilgileri (Firestore kullanıcı dokümanı), tüm gardırop öğeleri ve fotoğrafları (Firestore + Cloud Storage), tüm topluluk paylaşımları ve fotoğrafları (Firestore + Cloud Storage), Stil Arenası fit kartların, oyların ve lig kayıtların, tüm engelleme kayıtları, Firebase Authentication kaydı kalıcı olarak silinir.',
           'Cihaz verileri: beğeniler ve dil tercihi yalnızca cihazınızda (AsyncStorage) saklanır; uygulamayı kaldırdığınızda otomatik olarak silinir.',
           'Raporlar: topluluk güvenliği amacıyla, diğer kullanıcılar tarafından oluşturulan raporlardaki anonim referanslar saklanabilir.',
           'Yasal yükümlülükler gerektirdiğinde ilgili veriler zorunlu süre boyunca tutulabilir.',
@@ -97,7 +98,7 @@ const content = {
       },
       {
         title: '11. Çocukların Gizliliği',
-        text: 'Uygulama 13 yaşın altındaki kullanıcılara yönelik değildir ve bilinçli olarak 13 yaşın altındaki bireylerden kişisel veri toplamaz. 13 yaşın altında bir kullanıcının veri paylaştığını fark etmemiz halinde ilgili hesap ve veriler en kısa sürede silinir. Ebeveynler veya yasal vasiler bu durumu contact@skymoonstudios.com adresine bildirerek silme talep edebilir.',
+        text: 'Uygulama 16 yaşından küçük kullanıcılara yönelik değildir ve bilinçli olarak 16 yaşından küçük bireylerden kişisel veri toplamaz. 16 yaş altı bir kullanıcının veri paylaştığını fark etmemiz halinde ilgili hesap ve veriler en kısa sürede silinir. Ebeveynler veya yasal vasiler bu durumu contact@skymoonstudios.com adresine bildirerek silme talep edebilir.',
       },
       {
         title: '12. KVKK ve GDPR Kapsamındaki Haklarınız',
@@ -121,11 +122,15 @@ const content = {
         title: '13. Politika Değişiklikleri',
         text: 'Bu politika güncellenebilir. Önemli değişiklikler uygulama içi bildirim veya e-posta ile duyurulur. Güncel sürüm her zaman bu sayfada yayınlanır. Değişiklik sonrası uygulamayı kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.',
       },
+      {
+        title: '14. Stil Arenası ve Herkese Açık Görünürlük',
+        text: 'Stil Arenası özelliğini kullandığında, oluşturduğun kombin kartları (yüz içermez) ve görünen kullanıcı adın, sıralaman ve puanın diğer kullanıcılara açık şekilde gösterilir. Oy verme işlemi anonimdir; kimin neye oy verdiği diğer kullanıcılarla paylaşılmaz. Hesabını sildiğinde fit kartların, oyların ve lig kayıtların kalıcı olarak silinir.',
+      },
     ],
   },
   en: {
     title: 'Privacy Policy',
-    lead: 'Last updated: February 25, 2026. This policy explains how the StyleUpS mobile application ("App") collects, processes, stores, and protects personal data. We act as the data controller under applicable data protection laws, including the Turkish Personal Data Protection Law No. 6698 (KVKK) and the EU General Data Protection Regulation (GDPR).',
+    lead: 'Last updated: July 16, 2026. This policy explains how the StyleUpS mobile application ("App") collects, processes, stores, and protects personal data. We act as the data controller under applicable data protection laws, including the Turkish Personal Data Protection Law No. 6698 (KVKK) and the EU General Data Protection Regulation (GDPR).',
     sections: [
       {
         title: '1. Data Controller',
@@ -139,6 +144,7 @@ const content = {
           'Identity and account data: email address, user-chosen display name (max 15 characters), Firebase-generated unique user ID (UID).',
           'Wardrobe data: uploaded garment photos, garment category (top, bottom, shoes, outerwear), color information, and style tags. This data is stored in Firebase Cloud Storage and Firestore.',
           'Community post data: selfie photo (taken via camera), selected outfit information (garment images, colors, styles), username. Posts are stored in Firestore and visible to all signed-in users.',
+          'Style Arena data: the face-free "fit cards" you create (outfit images, colors, styles), each fit card\'s rank/points/win-loss record, the votes you cast, and your displayed username. Your fit cards and league standing are shown publicly to other users; voting is anonymous.',
           'Interaction data: likes are stored only on your device (AsyncStorage); only an anonymous like counter is sent to the server. Individual like records are not stored server-side.',
           'Moderation data: user reports (reason, reporter UID, reported user UID, post ID), block records (blocker UID, blocked UID).',
           'Usage data: daily outfit generation count, daily share count, referral code. This information is stored to enforce plan limits.',
@@ -170,8 +176,8 @@ const content = {
         items: [
           'Account creation and authentication (Firebase Authentication) — performance of contract.',
           'Digital wardrobe management and AI-powered outfit suggestions — performance of contract and legitimate interest.',
-          'Proof verification of community posts: your selfie photo and specified garment information are sent to the OpenAI API to verify the post is a genuine outfit — legitimate interest and service quality.',
-          'Content moderation: selfie photos are screened for inappropriate content via the OpenAI Moderation API — legal obligation and community safety.',
+          'Proof feature for community posts: the selfie taken during sharing is stored to indicate the post belongs to a genuine outfit and is screened for safety before publishing — legitimate interest and service quality.',
+          'Content moderation: all shared and competing images are automatically screened with Google Cloud Vision SafeSearch before publishing; content flagged for violence, hate speech, sexual or dangerous content is blocked — legal obligation and community safety.',
           'Enforcing plan limits (daily outfit/share quotas) — performance of contract.',
           'Processing user reports and blocks — legal obligation and community safety.',
           'Referral system management — legitimate interest.',
@@ -182,20 +188,20 @@ const content = {
         text: 'Your data is shared with the following third-party service providers:',
         items: [
           'Firebase (Google LLC): authentication (Firebase Auth), database (Firestore), file storage (Cloud Storage), server-side functions (Cloud Functions). Google privacy policy: https://policies.google.com/privacy',
-          'OpenAI (OpenAI LLC): selfie photos from community posts are sent to OpenAI servers for proof verification and content moderation. Data sent: selfie image URL and expected garment color/style information. OpenAI privacy policy: https://openai.com/policies/privacy-policy',
+          'Google Cloud Vision (Google LLC): shared and competing images are sent to the Google Cloud Vision service for content moderation (SafeSearch). Processing occurs through the app\'s Google Cloud service account. Google privacy policy: https://policies.google.com/privacy',
           'Firebase App Check (ReCAPTCHA v3, web only): browser fingerprint data is sent to Google for bot protection.',
         ],
       },
       {
         title: '7. International Data Transfers',
-        text: 'Due to Firebase infrastructure, personal data may be processed on servers in the United States or the European Economic Area (EEA). OpenAI servers are located in the United States. These transfers are carried out under appropriate safeguards (standard contractual clauses) in accordance with Article 9 of the KVKK and Article 46 of the GDPR.',
+        text: 'Due to Firebase and Google Cloud infrastructure, personal data may be processed on servers in the United States or the European Economic Area (EEA). These transfers are carried out under appropriate safeguards (standard contractual clauses) in accordance with Article 9 of the KVKK and Article 46 of the GDPR.',
       },
       {
         title: '8. Data Retention and Deletion',
         text: 'Your data is retained and deleted according to the following:',
         items: [
           'Account data: retained while the account is active. Upon account deletion request, all data is deleted at once.',
-          'Scope of account deletion: profile information (Firestore user document), all wardrobe items and photos (Firestore + Cloud Storage), all community posts and photos (Firestore + Cloud Storage), all block records, and the Firebase Authentication record are permanently deleted.',
+          'Scope of account deletion: profile information (Firestore user document), all wardrobe items and photos (Firestore + Cloud Storage), all community posts and photos (Firestore + Cloud Storage), your Style Arena fit cards, votes and league records, all block records, and the Firebase Authentication record are permanently deleted.',
           'Device data: likes and language preference are stored only on your device (AsyncStorage) and are automatically deleted when you uninstall the app.',
           'Reports: for community safety purposes, anonymous references in reports created by other users may be retained.',
           'Data may be retained longer where required by legal obligations.',
@@ -217,7 +223,7 @@ const content = {
       },
       {
         title: '11. Children\'s Privacy',
-        text: 'The App is not intended for users under the age of 13 and does not knowingly collect personal data from individuals under 13. If we become aware that a user under 13 has shared personal data, the relevant account and data will be deleted as soon as possible. Parents or legal guardians may request deletion by contacting contact@skymoonstudios.com.',
+        text: 'The App is not intended for users under 16 and does not knowingly collect personal data from individuals under 16. If we become aware that a user under 16 has shared personal data, the relevant account and data will be deleted as soon as possible. Parents or legal guardians may request deletion by contacting contact@skymoonstudios.com.',
       },
       {
         title: '12. Your Rights Under KVKK and GDPR',
@@ -240,6 +246,10 @@ const content = {
       {
         title: '13. Policy Changes',
         text: 'This policy may be updated. Significant changes will be communicated via in-app notification or email. The current version is always published on this page. Continued use of the App after changes constitutes acceptance of the updated policy.',
+      },
+      {
+        title: '14. Style Arena and Public Visibility',
+        text: 'When you use the Style Arena, the outfit cards you create (no face) and your displayed username, rank and points are shown publicly to other users. Voting is anonymous; who voted for what is not shared with other users. When you delete your account, your fit cards, votes and league records are permanently deleted.',
       },
     ],
   },

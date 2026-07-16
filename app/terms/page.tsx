@@ -5,7 +5,7 @@ import { useLanguage } from '@/components/language-context';
 const content = {
   tr: {
     title: 'Kullanım Koşulları',
-    lead: 'Son güncelleme: 26 Şubat 2026. StyleUpS mobil uygulamasını ("Uygulama") kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız. Lütfen dikkatle okuyunuz.',
+    lead: 'Son güncelleme: 16 Temmuz 2026. StyleUpS mobil uygulamasını ("Uygulama") kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız. Lütfen dikkatle okuyunuz.',
     sections: [
       {
         title: '1. Hizmetin Tanımı',
@@ -24,7 +24,7 @@ const content = {
       },
       {
         title: '3. Yaş Sınırı',
-        text: 'Uygulamayı kullanabilmek için en az 13 yaşında olmalısınız. 18 yaşından küçük kullanıcılar, bir ebeveyn veya yasal vasinin onayı ile uygulamayı kullanabilir. 13 yaş altı kullanıcılardan haberdar olmamız halinde hesap derhal kapatılır.',
+        text: 'Uygulamayı kullanabilmek için en az 16 yaşında olmalısınız. 18 yaşından küçük kullanıcılar, bir ebeveyn veya yasal vasinin onayı ile uygulamayı kullanabilir. 16 yaş altı kullanıcılardan haberdar olmamız halinde hesap derhal kapatılır.',
       },
       {
         title: '4. Abonelik Planları ve Limitler',
@@ -74,10 +74,10 @@ const content = {
       {
         title: '8. İçerik ve Moderasyon',
         items: [
-          'Toplulukta paylaşılan tüm içerikler OpenAI Moderation API aracılığıyla otomatik olarak taranır. Şiddet, nefret söylemi, cinsel içerik veya kendine zarar verme sinyalleri içeren paylaşımlar otomatik olarak engellenir.',
-          'Proof doğrulaması: Topluluk paylaşımı sırasında çekilen selfie, OpenAI GPT-4o-mini modeline gönderilerek paylaşılan kombinin gerçekten giyildiği doğrulanır. Bu görsel yalnızca doğrulama amacıyla kullanılır ve saklanmaz.',
-          'Kullanıcılar uygunsuz buldukları içerikleri sebep belirterek rapor edebilir. Raporlar Firestore\'da saklanır ve incelenir.',
-          'Kullanıcılar diğer kullanıcıları engelleyebilir; engellenen kullanıcının paylaşımları görünmez olur.',
+          'Paylaşılan ve Stil Arenası\'na giren tüm görseller, yayınlanmadan önce Google Cloud Vision SafeSearch ile otomatik olarak denetlenir. Şiddet, nefret söylemi, cinsel içerik veya tehlikeli içerik işaretleri taşıyan içerik otomatik olarak engellenir. Moderasyon geçici olarak yapılamazsa içerik onaya alınana kadar gizli tutulur (fail-closed).',
+          'Proof özelliği: Topluluk paylaşımı sırasında çekilen selfie, paylaşımın gerçek bir kombine ait olduğunu göstermek amacıyla saklanır ve yayınlanmadan önce güvenlik taramasından geçirilir.',
+          'Kullanıcılar uygunsuz buldukları içerikleri sebep belirterek rapor edebilir. Yeterli sayıda farklı kullanıcı tarafından raporlanan içerik otomatik olarak gizlenir; raporlar Firestore\'da saklanır ve incelenir.',
+          'Kullanıcılar diğer kullanıcıları engelleyebilir; engellenen kullanıcının paylaşımları ve arena içerikleri görünmez olur.',
           'Politika ihlalinde içerik kaldırılabilir, hesap geçici veya kalıcı olarak kısıtlanabilir.',
           'İçerik kaldırma veya hesap kısıtlama kararlarına contact@skymoonstudios.com üzerinden itiraz edilebilir.',
         ],
@@ -86,9 +86,8 @@ const content = {
         title: '9. Yapay Zekâ Kullanımı ve Üçüncü Taraf Hizmetler',
         items: [
           'Kombin önerileri yapay zekâ modelleri tarafından üretilir ve tamamen tavsiye niteliğindedir; profesyonel moda danışmanlığı yerine geçmez.',
-          'Proof doğrulaması ve içerik moderasyonu için OpenAI API hizmetleri kullanılır. Doğrulama fotoğraflarınız bu amaçla OpenAI sunucularına iletilir.',
-          'OpenAI, Zero Data Retention (ZDR) API politikası kapsamında iletilen verileri model eğitimi için kullanmaz. Detaylar: https://openai.com/enterprise-privacy/',
-          'Firebase hizmetleri (Authentication, Firestore, Cloud Storage, Cloud Functions) Google tarafından sağlanır ve Google Cloud güvenlik standartlarına tabidir.',
+          'İçerik moderasyonu için Google Cloud Vision (SafeSearch) hizmeti kullanılır. Paylaşılan ve arenaya giren görseller bu amaçla, uygulamanın Google Cloud servis hesabı üzerinden Google Cloud Vision servisine iletilir.',
+          'Firebase ve Google Cloud hizmetleri (Authentication, Firestore, Cloud Storage, Cloud Functions, Cloud Vision) Google tarafından sağlanır ve Google Cloud güvenlik standartlarına tabidir. Google gizlilik politikası: https://policies.google.com/privacy',
           'StyleUpS, üçüncü taraf hizmet sağlayıcıların işleyişi üzerinde kontrol sahibi değildir ve bu hizmetlerin kesintisiz çalışmasını garanti edemez.',
         ],
       },
@@ -141,7 +140,7 @@ const content = {
         items: [
           'Uygulama "olduğu gibi" (as-is) ve "mevcut haliyle" (as-available) sunulur; kesintisiz, hatasız veya güvenli çalışma garanti edilmez.',
           'AI tarafından üretilen kombin önerileri tavsiye niteliğindedir ve hiçbir şekilde profesyonel moda danışmanlığı yerine geçmez.',
-          'Firebase, OpenAI veya diğer üçüncü taraf hizmetlerdeki kesintilerden kaynaklanan aksamalardan StyleUpS sorumlu tutulamaz.',
+          'Firebase, Google Cloud veya diğer üçüncü taraf hizmetlerdeki kesintilerden kaynaklanan aksamalardan StyleUpS sorumlu tutulamaz.',
           'Kullanıcıların topluluk akışına yüklediği içeriklerden içerik sahibi kullanıcı sorumludur.',
           'Kanunen izin verilen azami ölçüde, dolaylı, arızi, özel veya cezai zararlardan sorumluluk kabul edilmez.',
           'StyleUpS\'ın toplam sorumluluğu, son 12 ayda ödediğiniz abonelik tutarını veya 100 ABD Doları\'ndan düşük olanını aşamaz.',
@@ -152,11 +151,21 @@ const content = {
         text: 'Bu koşullar Türkiye Cumhuriyeti hukukuna tabidir. Uyuşmazlıklarda İstanbul (Anadolu) mahkemeleri ve icra daireleri yetkilidir. Avrupa Birliği\'nde ikamet eden kullanıcılar için zorunlu tüketici koruma hükümleri saklıdır.',
         contact: 'Genel destek: contact@skymoonstudios.com · Hukuki konular: contact@skymoonstudios.com',
       },
+      {
+        title: '17. Stil Arenası (Yarışma, Oylama ve Lig)',
+        items: [
+          'Stil Arenası\'nda kombinlerinden yüz içermeyen "fit kartları" oluşturur ve halka açık arenaya gönderirsin. Fit kartların diğer kullanıcılara açık şekilde gösterilir.',
+          'Diğer kullanıcılar fit kartlarını kör (anonim) ikili düellolarda oylar. Görünen kullanıcı adın, rütben ve puanın lig tablosunda tüm kullanıcılara görünür.',
+          'Arenaya gönderdiğin içerik topluluk kurallarına tabidir. Uygunsuz, telif hakkı ihlali içeren veya başkasına ait görselleri gönderemezsin.',
+          'Her kullanıcı, arenadaki bir içeriği bildirebilir ve içerik üreticisini engelleyebilir.',
+          'Oy mekanizmasını manipüle etmek (sahte hesap, bot, oy ticareti) yasaktır ve hesabın kapatılmasına yol açar.',
+        ],
+      },
     ],
   },
   en: {
     title: 'Terms of Use',
-    lead: 'Last updated: February 26, 2026. By using the StyleUpS mobile application ("App"), you agree to the following terms. Please read carefully.',
+    lead: 'Last updated: July 16, 2026. By using the StyleUpS mobile application ("App"), you agree to the following terms. Please read carefully.',
     sections: [
       {
         title: '1. Service Description',
@@ -175,7 +184,7 @@ const content = {
       },
       {
         title: '3. Age Requirement',
-        text: 'You must be at least 13 years old to use the App. Users under 18 may use the App with the consent of a parent or legal guardian. If we become aware of a user under the age of 13, the account will be terminated immediately.',
+        text: 'You must be at least 16 years old to use the App. Users under 18 may use the App with the consent of a parent or legal guardian. If we become aware of a user under the age of 16, the account will be terminated immediately.',
       },
       {
         title: '4. Subscription Plans and Limits',
@@ -225,10 +234,10 @@ const content = {
       {
         title: '8. Content and Moderation',
         items: [
-          'All community content is automatically scanned via the OpenAI Moderation API. Posts containing signals of violence, hate speech, sexual content, or self-harm are automatically blocked.',
-          'Proof verification: A selfie taken during community sharing is sent to the OpenAI GPT-4o-mini model to verify that the shared outfit is actually being worn. This image is used solely for verification and is not stored.',
-          'Users may report content they find inappropriate by providing a reason. Reports are stored in Firestore and reviewed.',
-          'Users may block other users; blocked users\' posts become invisible.',
+          'All shared and Style Arena content is automatically screened with Google Cloud Vision SafeSearch before publishing. Content flagged for violence, hate speech, sexual or dangerous content is automatically blocked. If moderation is temporarily unavailable, content is held hidden until it can be cleared (fail-closed).',
+          'Proof feature: A selfie taken during community sharing is stored to indicate the post belongs to a genuine outfit and is screened for safety before publishing.',
+          'Users may report content they find inappropriate by providing a reason. Content reported by enough distinct users is automatically hidden; reports are stored in Firestore and reviewed.',
+          'Users may block other users; the blocked user\'s posts and arena content become invisible.',
           'Policy violations may result in content removal and temporary or permanent account restrictions.',
           'Content removal or account restriction decisions can be appealed via contact@skymoonstudios.com.',
         ],
@@ -237,9 +246,8 @@ const content = {
         title: '9. AI Usage and Third-Party Services',
         items: [
           'Outfit suggestions are generated by AI models and are entirely advisory; they do not replace professional fashion consultation.',
-          'OpenAI API services are used for proof verification and content moderation. Your verification photos are transmitted to OpenAI servers for this purpose.',
-          'Under OpenAI\'s Zero Data Retention (ZDR) API policy, transmitted data is not used for model training. Details: https://openai.com/enterprise-privacy/',
-          'Firebase services (Authentication, Firestore, Cloud Storage, Cloud Functions) are provided by Google and are subject to Google Cloud security standards.',
+          'Google Cloud Vision (SafeSearch) is used for content moderation. Shared and competing images are transmitted to the Google Cloud Vision service for this purpose, through the app\'s Google Cloud service account.',
+          'Firebase and Google Cloud services (Authentication, Firestore, Cloud Storage, Cloud Functions, Cloud Vision) are provided by Google and are subject to Google Cloud security standards. Google privacy policy: https://policies.google.com/privacy',
           'StyleUpS does not have control over the operation of third-party service providers and cannot guarantee their uninterrupted availability.',
         ],
       },
@@ -292,7 +300,7 @@ const content = {
         items: [
           'The App is provided "as is" and "as available"; uninterrupted, error-free, or secure operation is not guaranteed.',
           'AI-generated outfit suggestions are advisory only and do not in any way replace professional fashion consultation.',
-          'StyleUpS shall not be held liable for disruptions caused by outages in Firebase, OpenAI, or other third-party services.',
+          'StyleUpS shall not be held liable for disruptions caused by outages in Firebase, Google Cloud, or other third-party services.',
           'Users are responsible for content they upload to the community feed.',
           'To the maximum extent permitted by law, we are not liable for indirect, incidental, special, or punitive damages.',
           'StyleUpS\'s total liability shall not exceed the lesser of subscription fees paid by you in the last 12 months or USD 100.',
@@ -302,6 +310,16 @@ const content = {
         title: '16. Governing Law and Dispute Resolution',
         text: 'These terms are governed by the laws of the Republic of Turkey. The courts and enforcement offices of Istanbul (Anadolu) shall have jurisdiction over any disputes. Mandatory consumer protection provisions for users residing in the European Union are reserved.',
         contact: 'General support: contact@skymoonstudios.com · Legal matters: contact@skymoonstudios.com',
+      },
+      {
+        title: '17. Style Arena (Competition, Voting and League)',
+        items: [
+          'In the Style Arena you create face-free "fit cards" from your outfits and submit them to the public arena. Your fit cards are shown publicly to other users.',
+          'Other users vote on your fit cards in blind (anonymous) head-to-head duels. Your displayed username, rank and points are visible to all users on the league table.',
+          'Content you submit to the arena is subject to community rules. You may not submit objectionable, copyright-infringing, or images that belong to someone else.',
+          'Every user can report arena content and block the creator.',
+          'Manipulating the voting system (fake accounts, bots, vote trading) is prohibited and may result in account termination.',
+        ],
       },
     ],
   },

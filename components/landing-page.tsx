@@ -53,7 +53,7 @@ const dictionary = {
       {
         step: '03',
         title: 'Güvenle Paylaş',
-        text: 'Proof moderasyonu, paylaşımın kombin sinyalleriyle uyumunu kontrol eder.',
+        text: 'Her paylaşım, yayınlanmadan önce Google Cloud Vision SafeSearch ile güvenlik taramasından geçer.',
       },
     ],
     section3Title: 'Planlar',
@@ -130,7 +130,7 @@ const dictionary = {
       {
         step: '03',
         title: 'Share With Trust',
-        text: 'Proof moderation verifies whether a post matches expected outfit signals.',
+        text: 'Every post is screened for safety with Google Cloud Vision SafeSearch before it appears.',
       },
     ],
     section3Title: 'Plans',
