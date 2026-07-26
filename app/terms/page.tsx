@@ -5,11 +5,11 @@ import { useLanguage } from '@/components/language-context';
 const content = {
   tr: {
     title: 'Kullanım Koşulları',
-    lead: 'Son güncelleme: 16 Temmuz 2026. StyleUpS mobil uygulamasını ("Uygulama") kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız. Lütfen dikkatle okuyunuz.',
+    lead: 'Son güncelleme: 27 Temmuz 2026. StyleUpS mobil uygulamasını ("Uygulama") kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız. Lütfen dikkatle okuyunuz.',
     sections: [
       {
         title: '1. Hizmetin Tanımı',
-        text: 'StyleUpS, kullanıcıların gardıroplarını dijital ortamda yönetmesine, yapay zekâ destekli kombin önerileri almasına ve topluluk üzerinden paylaşım yapmasına olanak tanıyan bir mobil uygulamadır. Uygulama Firebase altyapısı üzerinde çalışır; hesap doğrulaması Firebase Authentication, veri depolaması Cloud Firestore ve görsel depolaması Firebase Cloud Storage aracılığıyla gerçekleştirilir.',
+        text: 'StyleUpS, kullanıcıların gardıroplarını dijital ortamda yönetmesine, yapay zekâ destekli kombin önerileri almasına, topluluk üzerinden paylaşım yapmasına ve Stil Arenası yarışması, takip, arkadaş ligleri ve 1v1 düellolar gibi sosyal özellikleri kullanmasına olanak tanıyan bir mobil uygulamadır. Uygulama Firebase altyapısı üzerinde çalışır; hesap doğrulaması Firebase Authentication, veri depolaması Cloud Firestore ve görsel depolaması Firebase Cloud Storage aracılığıyla gerçekleştirilir.',
       },
       {
         title: '2. Hesap Oluşturma ve Güvenlik',
@@ -78,6 +78,7 @@ const content = {
           'Proof özelliği: Topluluk paylaşımı sırasında çekilen selfie, paylaşımın gerçek bir kombine ait olduğunu göstermek amacıyla saklanır ve yayınlanmadan önce güvenlik taramasından geçirilir.',
           'Kullanıcılar uygunsuz buldukları içerikleri sebep belirterek rapor edebilir. Yeterli sayıda farklı kullanıcı tarafından raporlanan içerik otomatik olarak gizlenir; raporlar Firestore\'da saklanır ve incelenir.',
           'Kullanıcılar diğer kullanıcıları engelleyebilir; engellenen kullanıcının paylaşımları ve arena içerikleri görünmez olur.',
+          'Profil fotoğrafın ve diğer herkese açık içeriğin de topluluk kurallarına tabidir. Bunlar otomatik ön taramadan geçmese de, uygunsuz bulunan içerik rapor edilebilir, kaldırılabilir ve hesap kısıtlanabilir.',
           'Politika ihlalinde içerik kaldırılabilir, hesap geçici veya kalıcı olarak kısıtlanabilir.',
           'İçerik kaldırma veya hesap kısıtlama kararlarına contact@skymoonstudios.com üzerinden itiraz edilebilir.',
         ],
@@ -88,6 +89,8 @@ const content = {
           'Kombin önerileri yapay zekâ modelleri tarafından üretilir ve tamamen tavsiye niteliğindedir; profesyonel moda danışmanlığı yerine geçmez.',
           'İçerik moderasyonu için Google Cloud Vision (SafeSearch) hizmeti kullanılır. Paylaşılan ve arenaya giren görseller bu amaçla, uygulamanın Google Cloud servis hesabı üzerinden Google Cloud Vision servisine iletilir.',
           'Firebase ve Google Cloud hizmetleri (Authentication, Firestore, Cloud Storage, Cloud Functions, Cloud Vision) Google tarafından sağlanır ve Google Cloud güvenlik standartlarına tabidir. Google gizlilik politikası: https://policies.google.com/privacy',
+          'Arka plan kaldırma özelliği için remove.bg (Kaleido AI GmbH), hava durumu bilgisi için Open-Meteo ve push bildirimleri için Expo push servisi (exp.host) kullanılır. Bu özellikler için gerekli asgari veri (sırasıyla kıyafet görseli, yaklaşık konum koordinatları ve push jetonu) ilgili sağlayıcıya iletilir. Ayrıntılar Gizlilik Politikası\'ndadır.',
+          'Uygulama kararlılığı için Sentry (crash raporlama) ve web sürümünde temel kullanım ölçümü için Firebase Analytics kullanılır; bu veriler reklam veya uygulamalar arası izleme için kullanılmaz.',
           'StyleUpS, üçüncü taraf hizmet sağlayıcıların işleyişi üzerinde kontrol sahibi değildir ve bu hizmetlerin kesintisiz çalışmasını garanti edemez.',
         ],
       },
@@ -95,7 +98,7 @@ const content = {
         title: '10. Fikri Mülkiyet',
         items: [
           'Uygulama tasarımı, kaynak kodu, logosu, yapay zekâ modelleri ve içerikleri StyleUpS\'a aittir ve Türkiye Cumhuriyeti ve uluslararası telif hakkı kanunları ile korunmaktadır.',
-          'Yüklediğiniz kıyafet fotoğraflarının ve paylaşım görsellerinin mülkiyeti size aittir.',
+          'Yüklediğiniz kıyafet fotoğrafları, paylaşım görselleri ve profil fotoğrafınızın mülkiyeti size aittir.',
           'Hizmetin sunulması (depolama, görüntüleme, AI analizi, topluluk akışında gösterim) için gerekli sınırlı, münhasır olmayan, telifsiz kullanım lisansını bize vermiş olursunuz.',
           'Bu lisans hesabınızı sildiğinizde sona erer ve tüm içeriğiniz sunucularımızdan kalıcı olarak silinir.',
           'Topluluk akışında paylaştığınız içerikler, tüm giriş yapmış kullanıcılar tarafından görülebilir.',
@@ -116,8 +119,10 @@ const content = {
       {
         title: '12. Cihaz İzinleri',
         items: [
-          'Kamera: Proof doğrulaması için selfie çekmek amacıyla kullanılır. Yalnızca paylaşım sırasında istenir.',
+          'Kamera: Proof için selfie çekmek amacıyla kullanılır. Yalnızca paylaşım sırasında istenir.',
           'Fotoğraf Kitaplığı: Gardıroba kıyafet eklemek için galeri erişimi gerekir.',
+          'Konum (yaklaşık/coarse): Hava durumuna uygun kombin önerisi sunmak için yalnızca istediğinizde ve uygulama açıkken kullanılır.',
+          'Bildirimler: Seri, arena/oylama ve haftalık meydan okuma hatırlatmaları göndermek için kullanılır.',
           'Bu izinler isteğe bağlıdır ve cihaz ayarlarından istediğiniz zaman geri alınabilir. İzin vermemeniz durumunda ilgili özellikler kullanılamaz.',
         ],
       },
@@ -161,15 +166,25 @@ const content = {
           'Oy mekanizmasını manipüle etmek (sahte hesap, bot, oy ticareti) yasaktır ve hesabın kapatılmasına yol açar.',
         ],
       },
+      {
+        title: '18. Sosyal Özellikler (Takip, Arkadaş Ligleri ve Düellolar)',
+        items: [
+          'Diğer kullanıcıları takip edebilir, seni takip edenleri görebilirsin. Görünen adın, profil fotoğrafın ve takipçi/takip sayıların herkese açık profilinde diğer kullanıcılara görünür.',
+          'Özel arkadaş ligleri oluşturabilir veya bir davet kodu ile katılabilirsin. Davet kodunu yalnızca güvendiğin kişilerle paylaşmalısın; kod ile ligine katılan üyeler senin sıralamanı görebilir.',
+          'Arkadaşlarınla 1v1 stil düelloları yapabilirsin; düelloya giren fitler ve sonuç, katılımcılar tarafından görülebilir.',
+          'Takip, lig ve düello mekanizmalarını manipüle etmek (sahte hesap, bot, spam davet) yasaktır ve hesabının kısıtlanmasına veya kapatılmasına yol açabilir.',
+          'Diğer kullanıcıları rahatsız edici, taciz edici veya tehdit edici davranışlarda bulunmak yasaktır; her kullanıcı bir başkasını engelleyebilir.',
+        ],
+      },
     ],
   },
   en: {
     title: 'Terms of Use',
-    lead: 'Last updated: July 16, 2026. By using the StyleUpS mobile application ("App"), you agree to the following terms. Please read carefully.',
+    lead: 'Last updated: July 27, 2026. By using the StyleUpS mobile application ("App"), you agree to the following terms. Please read carefully.',
     sections: [
       {
         title: '1. Service Description',
-        text: 'StyleUpS is a mobile application that enables users to manage their wardrobe digitally, receive AI-powered outfit suggestions, and share outfits through a community feed. The App runs on Firebase infrastructure; account authentication is handled by Firebase Authentication, data storage by Cloud Firestore, and image storage by Firebase Cloud Storage.',
+        text: 'StyleUpS is a mobile application that enables users to manage their wardrobe digitally, receive AI-powered outfit suggestions, share outfits through a community feed, and use social features such as the Style Arena competition, follows, friend leagues, and 1v1 duels. The App runs on Firebase infrastructure; account authentication is handled by Firebase Authentication, data storage by Cloud Firestore, and image storage by Firebase Cloud Storage.',
       },
       {
         title: '2. Account Creation and Security',
@@ -238,6 +253,7 @@ const content = {
           'Proof feature: A selfie taken during community sharing is stored to indicate the post belongs to a genuine outfit and is screened for safety before publishing.',
           'Users may report content they find inappropriate by providing a reason. Content reported by enough distinct users is automatically hidden; reports are stored in Firestore and reviewed.',
           'Users may block other users; the blocked user\'s posts and arena content become invisible.',
+          'Your profile photo and other publicly visible content are also subject to community rules. Although these are not automatically pre-screened, content found inappropriate can be reported, removed, and may result in account restrictions.',
           'Policy violations may result in content removal and temporary or permanent account restrictions.',
           'Content removal or account restriction decisions can be appealed via contact@skymoonstudios.com.',
         ],
@@ -248,6 +264,8 @@ const content = {
           'Outfit suggestions are generated by AI models and are entirely advisory; they do not replace professional fashion consultation.',
           'Google Cloud Vision (SafeSearch) is used for content moderation. Shared and competing images are transmitted to the Google Cloud Vision service for this purpose, through the app\'s Google Cloud service account.',
           'Firebase and Google Cloud services (Authentication, Firestore, Cloud Storage, Cloud Functions, Cloud Vision) are provided by Google and are subject to Google Cloud security standards. Google privacy policy: https://policies.google.com/privacy',
+          'The background-removal feature uses remove.bg (Kaleido AI GmbH), weather information uses Open-Meteo, and push notifications use the Expo push service (exp.host). The minimum data required for each feature (respectively the garment image, approximate location coordinates, and the push token) is transmitted to the relevant provider. Details are in the Privacy Policy.',
+          'Sentry (crash reporting) is used for app stability and Firebase Analytics is used for basic usage metrics in the web version; this data is not used for advertising or cross-app tracking.',
           'StyleUpS does not have control over the operation of third-party service providers and cannot guarantee their uninterrupted availability.',
         ],
       },
@@ -255,7 +273,7 @@ const content = {
         title: '10. Intellectual Property',
         items: [
           'The App design, source code, logo, AI models, and content are owned by StyleUpS and protected under the laws of the Republic of Turkey and international copyright laws.',
-          'You retain ownership of garment photos and post images you upload.',
+          'You retain ownership of garment photos, post images, and your profile photo that you upload.',
           'You grant us a limited, non-exclusive, royalty-free license to use your content as necessary for service delivery (storage, display, AI analysis, community feed display).',
           'This license terminates when you delete your account, and all your content is permanently removed from our servers.',
           'Content shared in the community feed is visible to all signed-in users.',
@@ -276,8 +294,10 @@ const content = {
       {
         title: '12. Device Permissions',
         items: [
-          'Camera: Used to take a selfie for proof verification. Requested only during sharing.',
+          'Camera: Used to take a selfie for proof. Requested only during sharing.',
           'Photo Library: Gallery access is required to add garments to your closet.',
+          'Location (approximate/coarse): Used only when you request it and while the app is open, to provide weather-appropriate outfit suggestions.',
+          'Notifications: Used to send streak, arena/voting, and weekly challenge reminders.',
           'These permissions are optional and can be revoked at any time from your device settings. If you do not grant permissions, the associated features will be unavailable.',
         ],
       },
@@ -319,6 +339,16 @@ const content = {
           'Content you submit to the arena is subject to community rules. You may not submit objectionable, copyright-infringing, or images that belong to someone else.',
           'Every user can report arena content and block the creator.',
           'Manipulating the voting system (fake accounts, bots, vote trading) is prohibited and may result in account termination.',
+        ],
+      },
+      {
+        title: '18. Social Features (Follows, Friend Leagues, and Duels)',
+        items: [
+          'You can follow other users and see who follows you. Your display name, profile photo, and follower/following counts are visible to other users on your public profile.',
+          'You can create private friend leagues or join one with an invite code. You should share your invite code only with people you trust; members who join your league via the code can see your standing.',
+          'You can play 1v1 style duels with friends; the fits entered into a duel and its outcome are visible to the participants.',
+          'Manipulating the follow, league, or duel mechanisms (fake accounts, bots, spam invites) is prohibited and may result in restriction or termination of your account.',
+          'Harassing, abusive, or threatening behavior toward other users is prohibited; every user can block another.',
         ],
       },
     ],
