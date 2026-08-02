@@ -5,7 +5,7 @@ import { useLanguage } from '@/components/language-context';
 const content = {
   tr: {
     title: 'Gizlilik Politikası',
-    lead: 'Son güncelleme: 27 Temmuz 2026. Bu politika, StyleUpS mobil uygulamasının ("Uygulama") kişisel verileri nasıl topladığını, işlediğini, sakladığını ve koruduğunu açıklar. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Genel Veri Koruma Tüzüğü (GDPR) kapsamında veri sorumlusu olarak hareket ediyoruz.',
+    lead: 'Son güncelleme: 2 Ağustos 2026. Bu politika, StyleUpS mobil uygulamasının ("Uygulama") kişisel verileri nasıl topladığını, işlediğini, sakladığını ve koruduğunu açıklar. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Genel Veri Koruma Tüzüğü (GDPR) kapsamında veri sorumlusu olarak hareket ediyoruz.',
     sections: [
       {
         title: '1. Veri Sorumlusu',
@@ -23,7 +23,7 @@ const content = {
           'Profil fotoğrafı: isteğe bağlı olarak yüklediğin profil (avatar) fotoğrafı Firebase Cloud Storage\'da saklanır. Görünen adınla birlikte herkese açık profilinde, lig tablosunda ve sosyal özelliklerde diğer kullanıcılara gösterilir.',
           'Sosyal grafik verileri: takip ettiğin ve seni takip eden kullanıcılar, takipçi/takip sayıların. Takip ilişkilerin ve bu sayılar diğer kullanıcılara görünürdür.',
           'Arkadaş ligleri ve düello verileri: oluşturduğun veya katıldığın özel arkadaş liglerinin adı, üye listesi ve davet kodu; arkadaşlarınla yaptığın 1v1 stil düellolarının kayıtları (katılımcılar, seçilen fitler, oylar ve sonuç).',
-          'Etkileşim verileri: beğeniler yalnızca cihazınızda (AsyncStorage) saklanır; sunucuya yalnızca anonim beğeni sayacı gönderilir. Bireysel beğeni kaydı sunucuda tutulmaz.',
+          'Etkileşim verileri: bir gönderiyi beğendiğinde kullanıcı kimliğin, gönderi kimliği ve işlem zamanı sunucularımızda saklanır. Bu kayıt beğeni durumunu cihazlar arasında eşitlemek, yinelenen işlemleri önlemek ve toplam beğeni sayısını göstermek için kullanılır. Hangi hesabın hangi gönderiyi beğendiği diğer kullanıcılara gösterilmez.',
           'Moderasyon verileri: kullanıcı raporları (sebep, raporlayan UID, raporlanan kullanıcı UID, paylaşım ID), engelleme kayıtları (engelleyen UID, engellenen UID).',
           'Kullanım verileri: günlük kombin üretim sayısı, günlük paylaşım sayısı, referans kodu. Bu bilgiler plan limitlerinin uygulanması için saklanır.',
           'Bildirim verileri: bildirimlere izin verdiğinde, cihazına ait bir push jetonu (Expo push token) oluşturulur ve hesabınla ilişkili olarak Firestore\'da saklanır. Bu jeton yalnızca seri hatırlatıcıları, arena/oylama hatırlatmaları ve haftalık meydan okuma bildirimlerini göndermek için kullanılır.',
@@ -39,7 +39,7 @@ const content = {
           'Reklam kimlikleri: reklam kimliği (IDFA/GAID) veya benzeri cihaz parmak izi verileri toplanmaz.',
           'İzleme (tracking): App Tracking Transparency (ATT) izni istenmez, uygulamalar arası (cross-app) izleme yapılmaz ve toplanan hiçbir veri reklam veya izleme amacıyla kullanılmaz.',
           'Hassas konum: kesin (fine/GPS) konum veya konum geçmişi toplanmaz; hava durumu için yalnızca yaklaşık (coarse) konum kullanılır (bkz. Bölüm 2).',
-          'Ödeme bilgileri: uygulama doğrudan ödeme bilgisi toplamaz. Gelecekte eklenecek uygulama içi satın alma işlemleri Apple/Google altyapısı üzerinden gerçekleştirilecek olup ödeme bilgilerine erişimimiz olmayacaktır.',
+          'Ödeme bilgileri: StyleUpS şu anda uygulama içi satın alma veya ücretli abonelik sunmaz ve ödeme bilgisi toplamaz.',
         ],
       },
       {
@@ -74,7 +74,7 @@ const content = {
         items: [
           'Firebase (Google LLC): kimlik doğrulama (Firebase Auth), veritabanı (Firestore), dosya depolama (Cloud Storage), sunucu tarafı işlevler (Cloud Functions). Google gizlilik politikası: https://policies.google.com/privacy',
           'Google Cloud Vision (Google LLC): paylaşılan ve arenaya giren görseller, içerik moderasyonu (SafeSearch) amacıyla Google Cloud Vision servisine gönderilir. İşleme, uygulamanın Google Cloud servis hesabı üzerinden gerçekleşir. Google gizlilik politikası: https://policies.google.com/privacy',
-          'Firebase App Check (ReCAPTCHA v3, yalnızca web): bot koruması amacıyla tarayıcı parmak izi verileri Google\'a gönderilir.',
+          'Firebase App Check: hizmeti kötüye kullanımdan korumak ve isteklerin gerçek uygulama örneklerinden geldiğini doğrulamak için iOS\'ta Apple App Attest, Android\'de Google Play Integrity ve web ortamında reCAPTCHA v3 kullanılır. Bu sağlayıcılar doğrulama amacıyla cihaz ve istek bilgilerini işleyebilir.',
           'Sentry (Functional Software, Inc.): uygulama kararlılığını sağlamak için crash/hata raporlama hizmeti. Gönderilen veriler yalnızca hata ayrıntıları ve takma-adlı Firebase UID\'dir; e-posta veya başka kişisel bilgi gönderilmez ve bu veriler reklam için kullanılmaz. Sentry gizlilik politikası: https://sentry.io/privacy/',
           'Firebase Analytics (Google LLC, yalnızca web): web sürümünde temel kullanım ölçümü için kullanılır. Bu veriler reklam veya uygulamalar arası izleme için kullanılmaz. Google gizlilik politikası: https://policies.google.com/privacy',
           'remove.bg (Kaleido AI GmbH): arka plan kaldırma özelliğini kullandığında, ilgili kıyafet görseli arka planının kaldırılması amacıyla remove.bg servisine gönderilir. remove.bg gizlilik politikası: https://www.remove.bg/privacy',
@@ -91,9 +91,8 @@ const content = {
         text: 'Verileriniz aşağıdaki sürelerde saklanır ve silinir:',
         items: [
           'Hesap verileri: hesap aktif olduğu sürece saklanır. Hesap silme talebinde tüm veriler tek seferde silinir.',
-          'Hesap silme kapsamı: profil bilgileri (Firestore kullanıcı dokümanı, push jetonu dahil), profil fotoğrafın ve herkese açık profil kaydın, tüm gardırop öğeleri ve fotoğrafları (Firestore + Cloud Storage), tüm topluluk paylaşımları ve fotoğrafları (Firestore + Cloud Storage), Stil Arenası fit kartların, oyların ve lig kayıtların, takip ilişkilerin (takip ettiklerin ve takipçilerin), düello/arkadaş ligi kayıtların, tüm engelleme kayıtları ve Firebase Authentication kaydı kalıcı olarak silinir.',
-          'Cihaz verileri: beğeniler ve dil tercihi yalnızca cihazınızda (AsyncStorage) saklanır; uygulamayı kaldırdığınızda otomatik olarak silinir.',
-          'Raporlar: topluluk güvenliği amacıyla, diğer kullanıcılar tarafından oluşturulan raporlardaki anonim referanslar saklanabilir.',
+          'Hesap silme kapsamı: profil ve kullanıcı adı kayıtları, push jetonu, profil fotoğrafı, gardırop ve favoriler, topluluk gönderileri ve görselleri, beğeniler, takip ilişkileri, arkadaşlık/lig ve düello kayıtları, davetler, bildirim ve doğrulama kayıtları, raporlar, engellemeler, Stil Arenası fitleri ve oyları, liderlik kayıtları, Apple oturum verileri ve Firebase Authentication hesabı kalıcı olarak silinir. Sahibi olduğun arkadaş ligleri kapatılır; üye olduklarından çıkarılırsın.',
+          'Cihaz verileri: dil tercihi ve bazı arayüz tercihleri cihazda (AsyncStorage) saklanır; uygulamayı kaldırdığında otomatik olarak silinir.',
           'Yasal yükümlülükler gerektirdiğinde ilgili veriler zorunlu süre boyunca tutulabilir.',
         ],
       },
@@ -104,7 +103,7 @@ const content = {
           'Dosya yükleme boyutu sınırlıdır: gardırop görselleri maks. 10 MB, paylaşım görselleri maks. 12 MB.',
           'Depolama dosya adları kullanıcı UID\'sine bağlıdır; başka bir kullanıcının dosyasına erişim teknik olarak engellenmiştir.',
           'API iletişimleri HTTPS üzerinden şifrelenmiş olarak gerçekleştirilir.',
-          'Firebase App Check (web) ile API isteklerinin gerçek uygulamadan geldiği doğrulanır.',
+          'Firebase App Check ile iOS\'ta App Attest, Android\'de Play Integrity ve web\'de reCAPTCHA v3 kullanılarak API isteklerinin gerçek uygulamadan geldiği doğrulanır.',
         ],
       },
       {
@@ -145,7 +144,7 @@ const content = {
   },
   en: {
     title: 'Privacy Policy',
-    lead: 'Last updated: July 27, 2026. This policy explains how the StyleUpS mobile application ("App") collects, processes, stores, and protects personal data. We act as the data controller under applicable data protection laws, including the Turkish Personal Data Protection Law No. 6698 (KVKK) and the EU General Data Protection Regulation (GDPR).',
+    lead: 'Last updated: August 2, 2026. This policy explains how the StyleUpS mobile application ("App") collects, processes, stores, and protects personal data. We act as the data controller under applicable data protection laws, including the Turkish Personal Data Protection Law No. 6698 (KVKK) and the EU General Data Protection Regulation (GDPR).',
     sections: [
       {
         title: '1. Data Controller',
@@ -163,7 +162,7 @@ const content = {
           'Profile photo: the optional profile (avatar) photo you upload is stored in Firebase Cloud Storage. Together with your display name it is shown publicly to other users on your public profile, the league table, and social features.',
           'Social graph data: the users you follow and who follow you, and your follower/following counts. Your follow relationships and these counts are visible to other users.',
           'Friend league and duel data: the name, member list, and invite code of private friend leagues you create or join; and records of the 1v1 style duels you play with friends (participants, chosen fits, votes, and outcome).',
-          'Interaction data: likes are stored only on your device (AsyncStorage); only an anonymous like counter is sent to the server. Individual like records are not stored server-side.',
+          'Interaction data: when you like a post, your user ID, the post ID, and the time of the action are stored on our servers. This record synchronizes likes across devices, prevents duplicates, and displays the total count. Other users are not shown which account liked which post.',
           'Moderation data: user reports (reason, reporter UID, reported user UID, post ID), block records (blocker UID, blocked UID).',
           'Usage data: daily outfit generation count, daily share count, referral code. This information is stored to enforce plan limits.',
           'Notification data: if you allow notifications, a device push token (Expo push token) is generated and stored linked to your account. This token is used only to send streak reminders, arena/voting reminders, and weekly challenge notifications.',
@@ -179,7 +178,7 @@ const content = {
           'Advertising identifiers: advertising IDs (IDFA/GAID) or similar device fingerprint data are not collected.',
           'Tracking: no App Tracking Transparency (ATT) permission is requested, no cross-app tracking is performed, and none of the data we collect is used for advertising or tracking.',
           'Precise location: fine/GPS location or location history is not collected; only approximate (coarse) location is used for weather (see Section 2).',
-          'Payment information: the App does not directly collect payment data. Future in-app purchases will be processed through Apple/Google infrastructure, and we will not have access to payment details.',
+          'Payment information: StyleUpS currently offers no in-app purchases or paid subscriptions and does not collect payment information.',
         ],
       },
       {
@@ -214,7 +213,7 @@ const content = {
         items: [
           'Firebase (Google LLC): authentication (Firebase Auth), database (Firestore), file storage (Cloud Storage), server-side functions (Cloud Functions). Google privacy policy: https://policies.google.com/privacy',
           'Google Cloud Vision (Google LLC): shared and competing images are sent to the Google Cloud Vision service for content moderation (SafeSearch). Processing occurs through the app\'s Google Cloud service account. Google privacy policy: https://policies.google.com/privacy',
-          'Firebase App Check (ReCAPTCHA v3, web only): browser fingerprint data is sent to Google for bot protection.',
+          'Firebase App Check: to protect the service from abuse and verify requests from genuine app instances, we use Apple App Attest on iOS, Google Play Integrity on Android, and reCAPTCHA v3 on the web. These providers may process device and request information for verification.',
           'Sentry (Functional Software, Inc.): crash/error reporting to keep the app stable. The only data sent is error details and a pseudonymous Firebase UID; no email or other personal information is sent, and this data is not used for advertising. Sentry privacy policy: https://sentry.io/privacy/',
           'Firebase Analytics (Google LLC, web only): used for basic usage metrics in the web version. This data is not used for advertising or cross-app tracking. Google privacy policy: https://policies.google.com/privacy',
           'remove.bg (Kaleido AI GmbH): when you use the background-removal feature, the relevant garment image is sent to remove.bg to remove its background. remove.bg privacy policy: https://www.remove.bg/privacy',
@@ -231,9 +230,8 @@ const content = {
         text: 'Your data is retained and deleted according to the following:',
         items: [
           'Account data: retained while the account is active. Upon account deletion request, all data is deleted at once.',
-          'Scope of account deletion: profile information (Firestore user document, including push token), your profile photo and public profile record, all wardrobe items and photos (Firestore + Cloud Storage), all community posts and photos (Firestore + Cloud Storage), your Style Arena fit cards, votes and league records, your follow relationships (following and followers), your duel/friend-league records, all block records, and the Firebase Authentication record are permanently deleted.',
-          'Device data: likes and language preference are stored only on your device (AsyncStorage) and are automatically deleted when you uninstall the app.',
-          'Reports: for community safety purposes, anonymous references in reports created by other users may be retained.',
+          'Scope of account deletion: profile and username records, push token, profile photo, wardrobe and favorites, community posts and images, likes, follow relationships, friend-league and duel records, referrals, notification and verification records, reports, blocks, Style Arena fits and votes, leaderboard records, Apple sign-in data, and the Firebase Authentication account are permanently deleted. Friend leagues you own are closed; you are removed from leagues you joined.',
+          'Device data: language and certain interface preferences are stored on-device (AsyncStorage) and are automatically deleted when you uninstall the app.',
           'Data may be retained longer where required by legal obligations.',
         ],
       },
@@ -244,7 +242,7 @@ const content = {
           'File upload sizes are limited: wardrobe images max 10 MB, post images max 12 MB.',
           'Storage file names are bound to user UIDs; access to another user\'s files is technically prevented.',
           'API communications are encrypted via HTTPS.',
-          'Firebase App Check (web) verifies that API requests originate from the genuine application.',
+          'Firebase App Check verifies genuine app requests using App Attest on iOS, Play Integrity on Android, and reCAPTCHA v3 on the web.',
         ],
       },
       {

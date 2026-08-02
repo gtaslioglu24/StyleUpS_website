@@ -5,11 +5,11 @@ import { useLanguage } from '@/components/language-context';
 const content = {
   tr: {
     title: 'Kullanım Koşulları',
-    lead: 'Son güncelleme: 27 Temmuz 2026. StyleUpS mobil uygulamasını ("Uygulama") kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız. Lütfen dikkatle okuyunuz.',
+    lead: 'Son güncelleme: 2 Ağustos 2026. StyleUpS mobil uygulamasını ("Uygulama") kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız. Lütfen dikkatle okuyunuz.',
     sections: [
       {
         title: '1. Hizmetin Tanımı',
-        text: 'StyleUpS, kullanıcıların gardıroplarını dijital ortamda yönetmesine, yapay zekâ destekli kombin önerileri almasına, topluluk üzerinden paylaşım yapmasına ve Stil Arenası yarışması, takip, arkadaş ligleri ve 1v1 düellolar gibi sosyal özellikleri kullanmasına olanak tanıyan bir mobil uygulamadır. Uygulama Firebase altyapısı üzerinde çalışır; hesap doğrulaması Firebase Authentication, veri depolaması Cloud Firestore ve görsel depolaması Firebase Cloud Storage aracılığıyla gerçekleştirilir.',
+        text: 'StyleUpS; dijital gardırop yönetimi, ruh hali/renk/hava durumuna göre stil önerileri, favoriler, stil takvimi ve Style Wrapped, topluluk paylaşımları, haftalık meydan okumalar, Stil Arenası, takip, arkadaş ligleri ve 1v1 düellolar sunan bir mobil uygulamadır. Uygulama Firebase altyapısı üzerinde çalışır; hesap doğrulaması Firebase Authentication, veri depolaması Cloud Firestore ve görsel depolaması Firebase Cloud Storage aracılığıyla gerçekleştirilir.',
       },
       {
         title: '2. Hesap Oluşturma ve Güvenlik',
@@ -27,25 +27,18 @@ const content = {
         text: 'Uygulamayı kullanabilmek için en az 16 yaşında olmalısınız. 18 yaşından küçük kullanıcılar, bir ebeveyn veya yasal vasinin onayı ile uygulamayı kullanabilir. 16 yaş altı kullanıcılardan haberdar olmamız halinde hesap derhal kapatılır.',
       },
       {
-        title: '4. Abonelik Planları ve Limitler',
-        text: 'Uygulama üç kullanım planı sunar. Her planın belirli günlük ve toplam kullanım limitleri vardır:',
+        title: '4. Planlar ve Kullanım Limitleri',
+        text: 'Uygulama iki kullanım planı sunar. Her planın belirli günlük ve toplam kullanım limitleri vardır:',
         items: [
-          'Free (Ücretsiz): Gardıropta en fazla 20 kıyafet, günde 2 kombin önerisi, günde 1 topluluk paylaşımı.',
-          'Invite: Gardıropta en fazla 40 kıyafet, günde 5 kombin önerisi, günde 2 topluluk paylaşımı. Davet (referans) sistemi aracılığıyla kazanılır.',
-          'Premium VIP: Gardıropta en fazla 80 kıyafet, günde 20 kombin önerisi, günde 3 topluluk paylaşımı.',
+          'Free (Ücretsiz): Gardıropta en fazla 20 kıyafet, günde 5 stil önerisi, günde 1 topluluk paylaşımı.',
+          'Invite: Gardıropta en fazla 40 kıyafet, günde 15 stil önerisi, günde 2 topluluk paylaşımı. Davet sistemi aracılığıyla kazanılır.',
           'Plan limitleri her gün gece yarısı (UTC) sıfırlanır.',
           'Plan özellikleri ve limitler önceden bildirim yapılarak değiştirilebilir.',
         ],
       },
       {
-        title: '5. Ödeme ve Abonelik Yönetimi',
-        items: [
-          'Premium VIP abonelikleri Apple App Store veya Google Play Store uygulama içi satın alma (IAP) altyapısı üzerinden işlenir.',
-          'Ödeme bilgileriniz Apple veya Google tarafından işlenir; StyleUpS hiçbir kredi kartı veya ödeme bilgisini toplamaz veya saklamaz.',
-          'Abonelik, dönem bitiminden en az 24 saat önce iptal edilmediği sürece otomatik olarak yenilenir.',
-          'İptal işlemi cihazınızın ayarlarındaki abonelik yönetimi bölümünden yapılır.',
-          'İade talepleri ilgili mağaza (Apple/Google) politikalarına tabidir; doğrudan StyleUpS üzerinden iade yapılamamaktadır.',
-        ],
+        title: '5. Ücretlendirme',
+        text: 'StyleUpS şu anda ücretsizdir; uygulama içi satın alma, ücretli abonelik veya otomatik yenileme sunmaz. Gelecekte ücretli bir özellik sunulursa ilgili koşullar kullanıma açılmadan önce güncellenir.',
       },
       {
         title: '6. Referans (Davet) Sistemi',
@@ -110,10 +103,11 @@ const content = {
           'Hesabınızı istediğiniz zaman uygulama içindeki "Hesabı Sil" seçeneği aracılığıyla kalıcı olarak silebilirsiniz.',
           'Hesap silme işlemi geri alınamaz ve aşağıdaki verilerin tamamı kalıcı olarak silinir:',
           '— Firebase Authentication kaydınız (e-posta, şifre)',
-          '— Firestore\'daki kullanıcı profili, gardırop öğeleri, topluluk paylaşımları, referans kodu ve raporlarınız',
-          '— Cloud Storage\'daki tüm gardırop görselleri ve paylaşım fotoğrafları',
+          '— Firestore\'daki profil, kullanıcı adı, gardırop, favori, paylaşım, beğeni, takip, davet, rapor, engelleme, bildirim ve doğrulama kayıtları',
+          '— Style Arena fitleri ve oyları, lig/liderlik verileri, arkadaş ligleri ve 1v1 düello kayıtları',
+          '— Cloud Storage\'daki gardırop, profil, paylaşım ve fit kartı görselleri ile Apple oturum verileri',
           'Silme işlemi öncesinde onay istenir. İşlem tamamlandıktan sonra verileriniz kurtarılamaz.',
-          'Cihazınızdaki yerel veriler (AsyncStorage\'da saklanan beğeniler ve dil tercihi) uygulama kaldırıldığında otomatik olarak silinir.',
+          'Cihazınızdaki yerel tercihler (dil ve bazı arayüz durumları) uygulama kaldırıldığında otomatik olarak silinir.',
         ],
       },
       {
@@ -127,8 +121,8 @@ const content = {
         ],
       },
       {
-        title: '13. Apple Standart EULA Uyumu',
-        text: 'Apple cihazlarında yapılan Premium abonelikler için Apple\'ın Standart Son Kullanıcı Lisans Sözleşmesi (EULA) geçerlidir. Bu koşullar ile Apple EULA arasında çelişki olması durumunda Apple EULA öncelikli olarak uygulanır. Apple EULA: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/',
+        title: '13. Apple Standart EULA',
+        text: 'Uygulamayı Apple App Store aracılığıyla edindiğinde Apple\'ın Standart Son Kullanıcı Lisans Sözleşmesi (EULA) de geçerlidir. Bu koşullar ile Apple EULA arasında çelişki olması durumunda zorunlu Apple koşulları öncelikli uygulanır. Apple EULA: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/',
       },
       {
         title: '14. Hizmet Değişiklikleri ve Sonlandırma',
@@ -148,7 +142,7 @@ const content = {
           'Firebase, Google Cloud veya diğer üçüncü taraf hizmetlerdeki kesintilerden kaynaklanan aksamalardan StyleUpS sorumlu tutulamaz.',
           'Kullanıcıların topluluk akışına yüklediği içeriklerden içerik sahibi kullanıcı sorumludur.',
           'Kanunen izin verilen azami ölçüde, dolaylı, arızi, özel veya cezai zararlardan sorumluluk kabul edilmez.',
-          'StyleUpS\'ın toplam sorumluluğu, son 12 ayda ödediğiniz abonelik tutarını veya 100 ABD Doları\'ndan düşük olanını aşamaz.',
+          'Bu bölüm, yürürlükteki mevzuat uyarınca sınırlandırılamayan veya kaldırılamayan tüketici haklarını ve sorumlulukları etkilemez.',
         ],
       },
       {
@@ -180,11 +174,11 @@ const content = {
   },
   en: {
     title: 'Terms of Use',
-    lead: 'Last updated: July 27, 2026. By using the StyleUpS mobile application ("App"), you agree to the following terms. Please read carefully.',
+    lead: 'Last updated: August 2, 2026. By using the StyleUpS mobile application ("App"), you agree to the following terms. Please read carefully.',
     sections: [
       {
         title: '1. Service Description',
-        text: 'StyleUpS is a mobile application that enables users to manage their wardrobe digitally, receive AI-powered outfit suggestions, share outfits through a community feed, and use social features such as the Style Arena competition, follows, friend leagues, and 1v1 duels. The App runs on Firebase infrastructure; account authentication is handled by Firebase Authentication, data storage by Cloud Firestore, and image storage by Firebase Cloud Storage.',
+        text: 'StyleUpS is a mobile app offering digital wardrobe management, mood/color/weather-aware style picks, favorites, a style calendar and Style Wrapped, community sharing, weekly challenges, Style Arena, follows, friend leagues, and 1v1 duels. The App runs on Firebase infrastructure; account authentication is handled by Firebase Authentication, data storage by Cloud Firestore, and image storage by Firebase Cloud Storage.',
       },
       {
         title: '2. Account Creation and Security',
@@ -202,25 +196,18 @@ const content = {
         text: 'You must be at least 16 years old to use the App. Users under 18 may use the App with the consent of a parent or legal guardian. If we become aware of a user under the age of 16, the account will be terminated immediately.',
       },
       {
-        title: '4. Subscription Plans and Limits',
-        text: 'The App offers three usage plans. Each plan has specific daily and total usage limits:',
+        title: '4. Plans and Usage Limits',
+        text: 'The App offers two usage plans. Each plan has specific daily and total usage limits:',
         items: [
-          'Free: Up to 20 closet items, 2 outfit suggestions per day, 1 community share per day.',
-          'Invite: Up to 40 closet items, 5 outfit suggestions per day, 2 community shares per day. Earned through the referral system.',
-          'Premium VIP: Up to 80 closet items, 20 outfit suggestions per day, 3 community shares per day.',
+          'Free: Up to 20 closet items, 5 style picks per day, and 1 community share per day.',
+          'Invite: Up to 40 closet items, 15 style picks per day, and 2 community shares per day. Earned through the referral system.',
           'Daily limits reset at midnight (UTC) each day.',
           'Plan features and limits may change with prior notice.',
         ],
       },
       {
-        title: '5. Billing and Subscription Management',
-        items: [
-          'Premium VIP subscriptions are processed through Apple App Store or Google Play Store in-app purchase (IAP) infrastructure.',
-          'Payment information is processed by Apple or Google; StyleUpS does not collect or store any credit card or payment data.',
-          'Subscriptions auto-renew unless canceled at least 24 hours before the current period ends.',
-          'Cancellation is managed through the subscription management section in your device settings.',
-          'Refund requests are subject to the respective store (Apple/Google) policies; refunds cannot be processed directly through StyleUpS.',
-        ],
+        title: '5. Pricing',
+        text: 'StyleUpS is currently free and offers no in-app purchases, paid subscriptions, or automatic renewals. If paid features are introduced in the future, these terms will be updated before they become available.',
       },
       {
         title: '6. Referral System',
@@ -285,10 +272,11 @@ const content = {
           'You may permanently delete your account at any time through the "Delete Account" option within the App.',
           'Account deletion is irreversible and permanently removes all of the following data:',
           '— Your Firebase Authentication record (email, password)',
-          '— Your Firestore user profile, closet items, community posts, referral code, and reports',
-          '— All closet images and post photos in Cloud Storage',
+          '— Firestore profile, username, wardrobe, favorites, posts, likes, follows, referrals, reports, blocks, notification, and verification records',
+          '— Style Arena fits and votes, league/leaderboard data, friend leagues, and 1v1 duel records',
+          '— Wardrobe, profile, post, and fit-card images in Cloud Storage, plus Apple sign-in data',
           'Confirmation is required before deletion. Once completed, your data cannot be recovered.',
-          'Local data on your device (likes and language preference stored in AsyncStorage) is automatically deleted when the App is uninstalled.',
+          'Local preferences on your device (language and certain interface state) are automatically deleted when the App is uninstalled.',
         ],
       },
       {
@@ -302,8 +290,8 @@ const content = {
         ],
       },
       {
-        title: '13. Apple Standard EULA Compliance',
-        text: 'Apple\'s Standard End User License Agreement (EULA) applies to Premium subscriptions made on Apple devices. In case of conflict between these terms and the Apple EULA, the Apple EULA shall prevail. Apple EULA: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/',
+        title: '13. Apple Standard EULA',
+        text: 'When you obtain the App through the Apple App Store, Apple\'s Standard End User License Agreement (EULA) also applies. If these terms conflict with mandatory Apple terms, those mandatory terms prevail. Apple EULA: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/',
       },
       {
         title: '14. Service Changes and Termination',
@@ -323,7 +311,7 @@ const content = {
           'StyleUpS shall not be held liable for disruptions caused by outages in Firebase, Google Cloud, or other third-party services.',
           'Users are responsible for content they upload to the community feed.',
           'To the maximum extent permitted by law, we are not liable for indirect, incidental, special, or punitive damages.',
-          'StyleUpS\'s total liability shall not exceed the lesser of subscription fees paid by you in the last 12 months or USD 100.',
+          'Nothing in this section limits or excludes consumer rights or liabilities that cannot be limited or excluded under applicable law.',
         ],
       },
       {

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, Plus_Jakarta_Sans } from 'next/font/google';
 import { SiteChrome } from '@/components/site-chrome';
 import './globals.css';
@@ -15,38 +15,38 @@ const bodyFont = Plus_Jakarta_Sans({
   weight: ['400', '500', '600', '700'],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://styleups.me';
 
 export const metadata: Metadata = {
-  title: 'StyleUpS | Dress Better, Faster',
+  title: 'StyleUpS | Gardırobun, Stil Asistanın ve Style Arena',
   description:
-    'StyleUpS helps people build better daily looks with AI-assisted picks, proof-based sharing, and style-safe moderation.',
+    'Dijital gardırobunu kur, hava durumuna ve ruh haline uygun stil önerileri al, paylaş ve Style Arena’da yarış.',
   metadataBase: new URL(siteUrl),
 
   openGraph: {
-    title: 'StyleUpS | Dress Better, Faster',
+    title: 'StyleUpS | Gardırobun, Stil Asistanın ve Style Arena',
     description:
-      'AI-powered wardrobe management. Build better daily outfits in seconds.',
+      'Dijital gardırop, kişisel stil önerileri, güvenli topluluk ve Style Arena tek uygulamada.',
     url: siteUrl,
     siteName: 'StyleUpS',
     locale: 'tr_TR',
     type: 'website',
     images: [
       {
-        url: '/og-image.png?v=99',
+        url: '/og-image-v2.png',
         width: 1200,
         height: 630,
-        alt: 'StyleUpS - Dress Better, Faster',
+        alt: 'StyleUpS dijital gardırop ve Style Arena',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'StyleUpS | Dress Better, Faster',
+    title: 'StyleUpS | Gardırobun, Stil Asistanın ve Style Arena',
     description:
-      'AI-powered wardrobe management. Build better daily outfits in seconds.',
-    images: ['/og-image.png?v=99'],
+      'Dijital gardırop, kişisel stil önerileri, güvenli topluluk ve Style Arena tek uygulamada.',
+    images: ['/og-image-v2.png'],
   },
 
   robots: {
@@ -66,6 +66,9 @@ export const metadata: Metadata = {
   },
 
   manifest: '/manifest.webmanifest',
+};
+
+export const viewport: Viewport = {
   themeColor: '#150f0e',
 };
 

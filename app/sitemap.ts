@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://outfitai.app';
+  const baseUrl = 'https://styleups.me';
   const now = new Date().toISOString();
 
   return [
