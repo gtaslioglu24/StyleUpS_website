@@ -14,7 +14,7 @@ const content = {
       {
         title: '2. Hesap Oluşturma ve Güvenlik',
         items: [
-          'Kayıt e-posta adresi ve şifre ile yapılır. Doğru ve güncel bir e-posta adresi kullanmalısınız.',
+          'Kayıt ve giriş, e-posta/şifre veya desteklenen Apple cihazlarında Apple ile Giriş kullanılarak gerçekleştirilebilir. Apple, kullanıcının tercihine bağlı olarak gerçek e-posta adresi yerine özel bir aktarma e-posta adresi sağlayabilir.',
           'Şifreniz Firebase Authentication tarafından güvenli şekilde saklanır; biz dahil hiç kimse şifrenizi düz metin olarak göremez.',
           'Görünen ad (display name) en fazla 15 karakter olabilir ve diğer kullanıcılar tarafından görülür.',
           'Hesap güvenliğinizden (şifre gizliliği, oturum yönetimi) siz sorumlusunuz.',
@@ -32,13 +32,13 @@ const content = {
         items: [
           'Free (Ücretsiz): Gardıropta en fazla 20 kıyafet, günde 5 stil önerisi, günde 1 topluluk paylaşımı.',
           'Invite: Gardıropta en fazla 40 kıyafet, günde 15 stil önerisi, günde 2 topluluk paylaşımı. Davet sistemi aracılığıyla kazanılır.',
-          'Plan limitleri her gün gece yarısı (UTC) sıfırlanır.',
+          'Günlük kullanım limitleri kullanıcının cihazındaki yerel takvim gününe göre sıfırlanır.',
           'Plan özellikleri ve limitler önceden bildirim yapılarak değiştirilebilir.',
         ],
       },
       {
         title: '5. Ücretlendirme',
-        text: 'StyleUpS şu anda ücretsizdir; uygulama içi satın alma, ücretli abonelik veya otomatik yenileme sunmaz. Gelecekte ücretli bir özellik sunulursa ilgili koşullar kullanıma açılmadan önce güncellenir.',
+        text: 'StyleUpS ücretsizdir ve uygulama içi satın alma sunmaz. Ödeme gerektiren bir özellik gelecekte kullanıma açılırsa ilgili koşullar önceden güncellenir.',
       },
       {
         title: '6. Referans (Davet) Sistemi',
@@ -60,18 +60,18 @@ const content = {
           'Otomasyon araçları, bot veya scraper kullanarak uygulamaya erişmek.',
           'Diğer kullanıcıları rahatsız edici, tehdit edici veya taciz edici davranışlarda bulunmak.',
           'Proof doğrulaması için başka bir kişiye ait fotoğraf kullanmak veya doğrulama sistemini yanıltmaya çalışmak.',
-          'Dosya boyutu sınırlarını (gardırop görseli: 10 MB, paylaşım görseli: 12 MB) aşmaya çalışmak.',
+          'Yüklenen görseller için geçerli olan dosya başına 3 MB\'den küçük olma sınırını aşmaya çalışmak.',
           'Firestore güvenlik kurallarını veya Storage erişim kısıtlamalarını atlatma girişiminde bulunmak.',
         ],
       },
       {
         title: '8. İçerik ve Moderasyon',
         items: [
-          'Paylaşılan ve Stil Arenası\'na giren tüm görseller, yayınlanmadan önce Google Cloud Vision SafeSearch ile otomatik olarak denetlenir. Şiddet, nefret söylemi, cinsel içerik veya tehlikeli içerik işaretleri taşıyan içerik otomatik olarak engellenir. Moderasyon geçici olarak yapılamazsa içerik onaya alınana kadar gizli tutulur (fail-closed).',
+          'Topluluk proof görselleri ve Style Arena fit kartları, yayınlanmadan önce Google Cloud Vision SafeSearch ile yetişkinlere yönelik, şiddet içeren veya müstehcen içerik işaretleri bakımından otomatik olarak kontrol edilir. Nefret, taciz, spam, sahtecilik ve diğer ihlaller kullanıcı raporları, engelleme araçları ve gerektiğinde manuel inceleme yoluyla yönetilir. Otomatik denetim geçici olarak gerçekleştirilemezse içerik herkese açılmaz ve beklemede tutulur.',
           'Proof özelliği: Topluluk paylaşımı sırasında çekilen selfie, paylaşımın gerçek bir kombine ait olduğunu göstermek amacıyla saklanır ve yayınlanmadan önce güvenlik taramasından geçirilir.',
           'Kullanıcılar uygunsuz buldukları içerikleri sebep belirterek rapor edebilir. Yeterli sayıda farklı kullanıcı tarafından raporlanan içerik otomatik olarak gizlenir; raporlar Firestore\'da saklanır ve incelenir.',
           'Kullanıcılar diğer kullanıcıları engelleyebilir; engellenen kullanıcının paylaşımları ve arena içerikleri görünmez olur.',
-          'Profil fotoğrafın ve diğer herkese açık içeriğin de topluluk kurallarına tabidir. Bunlar otomatik ön taramadan geçmese de, uygunsuz bulunan içerik rapor edilebilir, kaldırılabilir ve hesap kısıtlanabilir.',
+          'Profil fotoğrafın ve diğer herkese açık içeriğin topluluk kurallarına tabidir. Profil fotoğrafları otomatik SafeSearch kontrolünden geçmez; ihlaller kullanıcı engelleme araçları ile destek ve moderasyon kanalları üzerinden bildirilebilir. İhlal halinde içerik kaldırılabilir ve hesap kısıtlanabilir.',
           'Politika ihlalinde içerik kaldırılabilir, hesap geçici veya kalıcı olarak kısıtlanabilir.',
           'İçerik kaldırma veya hesap kısıtlama kararlarına contact@skymoonstudios.com üzerinden itiraz edilebilir.',
         ],
@@ -80,7 +80,7 @@ const content = {
         title: '9. Yapay Zekâ Kullanımı ve Üçüncü Taraf Hizmetler',
         items: [
           'Kombin önerileri yapay zekâ modelleri tarafından üretilir ve tamamen tavsiye niteliğindedir; profesyonel moda danışmanlığı yerine geçmez.',
-          'İçerik moderasyonu için Google Cloud Vision (SafeSearch) hizmeti kullanılır. Paylaşılan ve arenaya giren görseller bu amaçla, uygulamanın Google Cloud servis hesabı üzerinden Google Cloud Vision servisine iletilir.',
+          'İçerik moderasyonu için Google Cloud Vision SafeSearch kullanılır. Yalnızca topluluk paylaşımının proof/selfie görseli ve Style Arena\'da oluşturulan birleşik fit kartı bu amaçla uygulamanın Google Cloud servis hesabı üzerinden Google Cloud Vision hizmetine iletilir; gardırop görselleri ve profil fotoğrafları otomatik SafeSearch kontrolünün kapsamında değildir.',
           'Firebase ve Google Cloud hizmetleri (Authentication, Firestore, Cloud Storage, Cloud Functions, Cloud Vision) Google tarafından sağlanır ve Google Cloud güvenlik standartlarına tabidir. Google gizlilik politikası: https://policies.google.com/privacy',
           'Arka plan kaldırma özelliği için remove.bg (Kaleido AI GmbH), hava durumu bilgisi için Open-Meteo ve push bildirimleri için Expo push servisi (exp.host) kullanılır. Bu özellikler için gerekli asgari veri (sırasıyla kıyafet görseli, yaklaşık konum koordinatları ve push jetonu) ilgili sağlayıcıya iletilir. Ayrıntılar Gizlilik Politikası\'ndadır.',
           'Uygulama kararlılığı için Sentry (crash raporlama) ve web sürümünde temel kullanım ölçümü için Firebase Analytics kullanılır; bu veriler reklam veya uygulamalar arası izleme için kullanılmaz.',
@@ -105,7 +105,8 @@ const content = {
           '— Firebase Authentication kaydınız (e-posta, şifre)',
           '— Firestore\'daki profil, kullanıcı adı, gardırop, favori, paylaşım, beğeni, takip, davet, rapor, engelleme, bildirim ve doğrulama kayıtları',
           '— Style Arena fitleri ve oyları, lig/liderlik verileri, arkadaş ligleri ve 1v1 düello kayıtları',
-          '— Cloud Storage\'daki gardırop, profil, paylaşım ve fit kartı görselleri ile Apple oturum verileri',
+          '— Cloud Storage\'daki gardırop, profil, paylaşım ve fit kartı görselleri',
+          '— Firestore\'daki Apple oturum verileri',
           'Silme işlemi öncesinde onay istenir. İşlem tamamlandıktan sonra verileriniz kurtarılamaz.',
           'Cihazınızdaki yerel tercihler (dil ve bazı arayüz durumları) uygulama kaldırıldığında otomatik olarak silinir.',
         ],
@@ -183,7 +184,7 @@ const content = {
       {
         title: '2. Account Creation and Security',
         items: [
-          'Registration requires an email address and password. You must provide a valid, up-to-date email address.',
+          'Users can register and sign in with email/password or Sign in with Apple on supported Apple devices. Depending on the user\'s choice, Apple may provide a private relay email address instead of the user\'s actual email address.',
           'Your password is stored securely by Firebase Authentication; no one, including us, can see your password in plain text.',
           'Display names are limited to 15 characters and are visible to other users.',
           'You are responsible for maintaining the security of your account (password confidentiality, session management).',
@@ -201,13 +202,13 @@ const content = {
         items: [
           'Free: Up to 20 closet items, 5 style picks per day, and 1 community share per day.',
           'Invite: Up to 40 closet items, 15 style picks per day, and 2 community shares per day. Earned through the referral system.',
-          'Daily limits reset at midnight (UTC) each day.',
+          'Daily usage limits reset according to the user\'s local calendar day.',
           'Plan features and limits may change with prior notice.',
         ],
       },
       {
         title: '5. Pricing',
-        text: 'StyleUpS is currently free and offers no in-app purchases, paid subscriptions, or automatic renewals. If paid features are introduced in the future, these terms will be updated before they become available.',
+        text: 'StyleUpS is free and offers no in-app purchases. If a feature requiring payment is introduced in the future, these terms will be updated before it becomes available.',
       },
       {
         title: '6. Referral System',
@@ -229,18 +230,18 @@ const content = {
           'Accessing the App using automation tools, bots, or scrapers.',
           'Engaging in harassing, threatening, or abusive behavior toward other users.',
           'Using another person\'s photo for proof verification or attempting to deceive the verification system.',
-          'Attempting to exceed file size limits (closet image: 10 MB, post image: 12 MB).',
+          'Attempting to exceed the requirement that uploaded images must be smaller than 3 MB per file.',
           'Attempting to bypass Firestore security rules or Storage access restrictions.',
         ],
       },
       {
         title: '8. Content and Moderation',
         items: [
-          'All shared and Style Arena content is automatically screened with Google Cloud Vision SafeSearch before publishing. Content flagged for violence, hate speech, sexual or dangerous content is automatically blocked. If moderation is temporarily unavailable, content is held hidden until it can be cleared (fail-closed).',
+          'Community proof images and Style Arena fit cards are automatically checked with Google Cloud Vision SafeSearch for adult, violent, or racy content signals before publication. Hate, harassment, spam, fraud, and other violations are handled through user reports, blocking tools, and manual review when necessary. If automated screening is temporarily unavailable, the content is not published and remains pending.',
           'Proof feature: A selfie taken during community sharing is stored to indicate the post belongs to a genuine outfit and is screened for safety before publishing.',
           'Users may report content they find inappropriate by providing a reason. Content reported by enough distinct users is automatically hidden; reports are stored in Firestore and reviewed.',
           'Users may block other users; the blocked user\'s posts and arena content become invisible.',
-          'Your profile photo and other publicly visible content are also subject to community rules. Although these are not automatically pre-screened, content found inappropriate can be reported, removed, and may result in account restrictions.',
+          'Your profile photo and other publicly visible content are subject to community rules. Profile photos are not automatically screened by SafeSearch; violations can be raised through user-blocking tools and support or moderation channels. Violating content may be removed and accounts may be restricted.',
           'Policy violations may result in content removal and temporary or permanent account restrictions.',
           'Content removal or account restriction decisions can be appealed via contact@skymoonstudios.com.',
         ],
@@ -249,7 +250,7 @@ const content = {
         title: '9. AI Usage and Third-Party Services',
         items: [
           'Outfit suggestions are generated by AI models and are entirely advisory; they do not replace professional fashion consultation.',
-          'Google Cloud Vision (SafeSearch) is used for content moderation. Shared and competing images are transmitted to the Google Cloud Vision service for this purpose, through the app\'s Google Cloud service account.',
+          'Google Cloud Vision SafeSearch is used for content moderation. Only the community post proof/selfie image and the combined fit card created for Style Arena are transmitted to Google Cloud Vision through the app\'s Google Cloud service account; wardrobe images and profile photos are outside automated SafeSearch screening.',
           'Firebase and Google Cloud services (Authentication, Firestore, Cloud Storage, Cloud Functions, Cloud Vision) are provided by Google and are subject to Google Cloud security standards. Google privacy policy: https://policies.google.com/privacy',
           'The background-removal feature uses remove.bg (Kaleido AI GmbH), weather information uses Open-Meteo, and push notifications use the Expo push service (exp.host). The minimum data required for each feature (respectively the garment image, approximate location coordinates, and the push token) is transmitted to the relevant provider. Details are in the Privacy Policy.',
           'Sentry (crash reporting) is used for app stability and Firebase Analytics is used for basic usage metrics in the web version; this data is not used for advertising or cross-app tracking.',
@@ -274,7 +275,8 @@ const content = {
           '— Your Firebase Authentication record (email, password)',
           '— Firestore profile, username, wardrobe, favorites, posts, likes, follows, referrals, reports, blocks, notification, and verification records',
           '— Style Arena fits and votes, league/leaderboard data, friend leagues, and 1v1 duel records',
-          '— Wardrobe, profile, post, and fit-card images in Cloud Storage, plus Apple sign-in data',
+          '— Wardrobe, profile, post, and fit-card images in Cloud Storage',
+          '— Apple sign-in data in Firestore',
           'Confirmation is required before deletion. Once completed, your data cannot be recovered.',
           'Local preferences on your device (language and certain interface state) are automatically deleted when the App is uninstalled.',
         ],

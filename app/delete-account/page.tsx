@@ -33,7 +33,7 @@ const content = {
     helpTitle: 'Uygulama İçi Silme Çalışmıyorsa',
     helpText: 'Teknik bir sorun nedeniyle uygulama içi silme işlemini gerçekleştiremiyorsanız, hesabınıza kayıtlı e-posta adresi ile contact@skymoonstudios.com adresine "HESAP SİLME TALEBİ" konu başlığıyla bir e-posta gönderin. Kimliğiniz doğrulandıktan sonra silme işlemi tarafımızca başlatılır.',
     noteTitle: 'Önemli Not',
-    noteText: 'StyleUpS şu anda ücretli abonelik sunmaz. Apple ile Giriş kullanan hesaplarda uygulama Apple yetkisini de iptal etmeyi dener; uygulama ayrıca uyarı verirse bu yetkiyi Apple Hesabı ayarlarından kaldırabilirsiniz.',
+    noteText: 'StyleUpS ücretsizdir ve yinelenen ücret yoktur. Apple ile Giriş kullanan hesaplarda uygulama Apple yetkisini de iptal etmeyi dener; uygulama ayrıca uyarı verirse bu yetkiyi Apple Hesabı ayarlarından kaldırabilirsiniz.',
   },
   en: {
     title: 'Delete Account',
@@ -65,7 +65,7 @@ const content = {
     helpTitle: 'If In-App Deletion Doesn\'t Work',
     helpText: 'If you are unable to complete in-app deletion due to a technical issue, send an email to contact@skymoonstudios.com with the subject "ACCOUNT DELETION REQUEST" from the email address registered to your account. Deletion will be initiated after identity verification.',
     noteTitle: 'Important Note',
-    noteText: 'StyleUpS currently has no paid subscription. For accounts using Sign in with Apple, the app also attempts to revoke Apple authorization; if the app shows a separate warning, you can remove access from your Apple Account settings.',
+    noteText: 'StyleUpS is free and has no recurring charges. For accounts using Sign in with Apple, the app also attempts to revoke Apple authorization; if the app shows a separate warning, you can remove access from your Apple Account settings.',
   },
 } as const;
 

@@ -39,7 +39,7 @@ const dictionary = {
       },
       {
         title: 'Topluluk ve Güvenlik',
-        text: 'Kombinini proof ile paylaş; görseller yayınlanmadan önce Google Cloud Vision SafeSearch ile denetlensin.',
+        text: 'Proof görselleri ve Style Arena fit kartları yayınlanmadan önce SafeSearch ile yetişkin, şiddet ve müstehcen içerik sinyallerine karşı kontrol edilir; diğer ihlaller raporlama, engelleme ve gerektiğinde incelemeyle yönetilir.',
       },
       {
         title: 'Style Arena',
@@ -85,7 +85,7 @@ const dictionary = {
     ],
     finalTitle: 'Dolabınla başla, stilinle yüksel.',
     finalText:
-      'StyleUpS şu anda ücretsizdir; uygulama içi satın alma veya otomatik yenilenen abonelik sunmaz.',
+      'StyleUpS ücretsizdir ve uygulama içi satın alma sunmaz.',
     privacy: 'Gizlilik Politikası',
     terms: 'Kullanım Koşulları',
     garmentAlt: {
@@ -128,7 +128,7 @@ const dictionary = {
       },
       {
         title: 'Community & Safety',
-        text: 'Share with proof while images are screened with Google Cloud Vision SafeSearch before publishing.',
+        text: 'Proof images and Style Arena fit cards are checked by SafeSearch for adult, violent, and racy signals before publication; other violations are handled through reports, blocking, and review when necessary.',
       },
       {
         title: 'Style Arena',
@@ -174,7 +174,7 @@ const dictionary = {
     ],
     finalTitle: 'Start with your closet. Rise with your style.',
     finalText:
-      'StyleUpS is currently free and does not offer in-app purchases or auto-renewing subscriptions.',
+      'StyleUpS is free and does not offer in-app purchases.',
     privacy: 'Privacy Policy',
     terms: 'Terms of Use',
     garmentAlt: {

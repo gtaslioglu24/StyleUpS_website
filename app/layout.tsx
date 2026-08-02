@@ -15,7 +15,7 @@ const bodyFont = Plus_Jakarta_Sans({
   weight: ['400', '500', '600', '700'],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://styleups.me';
+const siteUrl = 'https://styleups.me';
 
 export const metadata: Metadata = {
   title: 'StyleUpS | Gardırobun, Stil Asistanın ve Style Arena',
