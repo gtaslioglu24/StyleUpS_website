@@ -5,12 +5,12 @@ import { useLanguage } from '@/components/language-context';
 const content = {
   tr: {
     title: 'Gizlilik Politikası',
-    lead: 'Son güncelleme: 2 Ağustos 2026. Bu politika, StyleUpS mobil uygulamasının ("Uygulama") kişisel verileri nasıl topladığını, işlediğini, sakladığını ve koruduğunu açıklar. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Genel Veri Koruma Tüzüğü (GDPR) kapsamında veri sorumlusu olarak hareket ediyoruz.',
+    lead: 'Son güncelleme: 28 Eylül 2026. Bu politika, StyleUpS mobil uygulamasının ("Uygulama") kişisel verileri nasıl topladığını, işlediğini, sakladığını ve koruduğunu açıklar. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Genel Veri Koruma Tüzüğü (GDPR) kapsamında veri sorumlusu olarak hareket ediyoruz.',
     sections: [
       {
         title: '1. Veri Sorumlusu',
         text: 'StyleUpS uygulamasını geliştiren ve işleten tüzel/gerçek kişi veri sorumlusudur.',
-        contact: 'İletişim: contact@skymoonstudios.com',
+        contact: 'İletişim: contact.skymoonstudios@gmail.com',
       },
       {
         title: '2. Toplanan Kişisel Veriler',
@@ -18,7 +18,7 @@ const content = {
         items: [
           'Kimlik ve hesap verileri: e-posta/şifre ile kayıt olduğunda e-posta adresin; desteklenen Apple cihazlarında Apple ile Giriş kullandığında Apple tarafından sağlanan gerçek veya özel aktarma e-posta adresin; kullanıcı tarafından belirlenen görüntü adı (display name, maks. 15 karakter) ve Firebase tarafından oluşturulan benzersiz kullanıcı kimliği (UID).',
           'Gardırop verileri: yüklenen kıyafet fotoğrafları, kıyafet kategorisi (üst, alt, ayakkabı, dış giyim), renk bilgisi ve stil etiketi. Bu veriler Firebase Cloud Storage ve Firestore\'da saklanır.',
-          'Topluluk paylaşım verileri: selfie fotoğrafı (kamera ile çekilir), seçilen kombin bilgileri (kıyafet görselleri, renkler, stiller), kullanıcı adı. Paylaşımlar tüm oturum açmış kullanıcılara görünür olarak Firestore\'da saklanır.',
+          'Topluluk paylaşım verileri: gardırobundaki parçalardan oluşturduğun kombin kartı görseli (selfie veya yüz fotoğrafı istenmez), seçilen kombin bilgileri (kıyafet görselleri, renkler, stiller), kullanıcı adı. Paylaşımlar tüm oturum açmış kullanıcılara görünür olarak Firestore\'da saklanır.',
           'Stil Arenası verileri: oluşturduğun yüz içermeyen "fit kartları" (kombin görselleri, renkler, stiller), fit kartının rütbesi/puanı/kazanma-kaybetme kaydı, verdiğin oylar ve görünen kullanıcı adın. Fit kartların ve lig sıralaman diğer kullanıcılara açık gösterilir; oy verme işlemi anonimdir.',
           'Profil fotoğrafı: isteğe bağlı olarak yüklediğin profil (avatar) fotoğrafı Firebase Cloud Storage\'da saklanır. Görünen adınla birlikte herkese açık profilinde, lig tablosunda ve sosyal özelliklerde diğer kullanıcılara gösterilir. Profil fotoğrafları topluluk kurallarına tabidir; ihlaller kullanıcı engelleme araçları ile destek ve moderasyon kanalları üzerinden bildirilebilir.',
           'Sosyal grafik verileri: takip ettiğin ve seni takip eden kullanıcılar, takipçi/takip sayıların. Takip ilişkilerin ve bu sayılar diğer kullanıcılara görünürdür.',
@@ -28,7 +28,7 @@ const content = {
           'Kullanım verileri: günlük kombin üretim sayısı, günlük paylaşım sayısı, referans kodu. Bu bilgiler plan limitlerinin uygulanması için saklanır.',
           'Bildirim verileri: bildirimlere izin verdiğinde, cihazına ait bir push jetonu (Expo push token) oluşturulur ve hesabınla ilişkili olarak Firestore\'da saklanır. Bu jeton yalnızca seri hatırlatıcıları, arena/oylama hatırlatmaları ve haftalık meydan okuma bildirimlerini göndermek için kullanılır.',
           'Konum verisi: yalnızca sen izin verdiğinde ve uygulama açıkken, hava durumuna uygun kombin önerileri sunmak amacıyla yaklaşık (coarse) konumun kullanılır. Konum yalnızca hava durumu bilgisini almak için işlenir; konum geçmişi saklanmaz, satılmaz veya pazarlama amacıyla üçüncü taraflarla paylaşılmaz.',
-          'Tanılama (crash) verileri: bir çökme veya hata oluştuğunda, hata ayrıntıları ve takma-adlı bir kullanıcı kimliği (Firebase UID) crash raporlama hizmeti Sentry\'ye gönderilir. E-posta veya başka kişisel bilgi gönderilmez.',
+          'Tanılama (crash) verileri: isteğe bağlıdır ve başlangıçta kapalıdır. Yalnızca açıkça izin verirsen, bir çökme veya hata oluştuğunda hata/performans ayrıntıları, uygulama içi kullanım olayları ve takma-adlı kullanıcı kimliğin (Firebase UID) Sentry\'ye gönderilir. E-posta adresi gönderilmez. İznini Ayarlar → Gizlilik tercihleri üzerinden istediğin an geri alabilirsin.',
           'Cihaz tercihleri: dil tercihi (TR/EN) cihazda (AsyncStorage) saklanır ve sunucuya gönderilmez.',
         ],
       },
@@ -46,8 +46,8 @@ const content = {
         title: '4. Cihaz İzinleri',
         text: 'Uygulama aşağıdaki cihaz izinlerini talep eder:',
         items: [
-          'Kamera erişimi: topluluk paylaşımları için selfie proof fotoğrafı çekmek amacıyla kullanılır. Kamera yalnızca kullanıcı aktif olarak fotoğraf çektiğinde çalışır.',
-          'Fotoğraf galerisi erişimi: gardıroba kıyafet fotoğrafı yüklemek ve proof fotoğrafı seçmek amacıyla kullanılır.',
+          'Kamera erişimi: gardırobuna eklemek istediğin kıyafetlerin fotoğrafını çekmek amacıyla kullanılır. Kamera yalnızca kullanıcı aktif olarak fotoğraf çektiğinde çalışır.',
+          'Fotoğraf galerisi erişimi: gardıroba kıyafet fotoğrafı yüklemek ve profil fotoğrafı seçmek amacıyla kullanılır. Paylaşım menüsünde "Görüntüyü Kaydet"i seçersen kombin kartın fotoğraf arşivine kaydedilir.',
           'Konum erişimi (yaklaşık/coarse): hava durumuna uygun kombin önerisi sunmak için yalnızca sen istediğinde ve uygulama açıkken kullanılır. İzni cihaz ayarlarından istediğin an geri çekebilirsin.',
           'Bildirim izni: seri hatırlatıcıları, arena/oylama hatırlatmaları ve haftalık meydan okuma bildirimlerini göndermek için kullanılır. Bildirimleri cihaz ayarlarından istediğin an kapatabilirsin.',
           'Arka planda kamera, galeri veya konum erişimi yapılmaz.',
@@ -57,11 +57,10 @@ const content = {
         title: '5. Verilerin İşlenme Amaçları ve Hukuki Dayanağı',
         items: [
           'Hesap oluşturma ve kimlik doğrulama (Firebase Authentication) — sözleşmenin ifası.',
-          'Dijital gardırop yönetimi ve AI destekli kombin önerileri sunma — sözleşmenin ifası ve meşru menfaat.',
-          'Topluluk paylaşımlarının proof özelliği: paylaşım sırasında çekilen selfie, paylaşımın gerçek bir kombine ait olduğunu göstermek amacıyla saklanır ve yayınlanmadan önce güvenlik taramasından geçirilir — meşru menfaat ve hizmet kalitesi.',
-          'İçerik moderasyonu: topluluk proof görselleri ve Style Arena fit kartları, yayınlanmadan önce Google Cloud Vision SafeSearch ile yetişkinlere yönelik, şiddet içeren veya müstehcen içerik işaretleri bakımından otomatik olarak kontrol edilir. Nefret, taciz, spam, sahtecilik ve diğer ihlaller kullanıcı raporları, engelleme araçları ve gerektiğinde manuel inceleme yoluyla yönetilir. Otomatik denetim geçici olarak gerçekleştirilemezse içerik herkese açılmaz ve beklemede tutulur — hukuki yükümlülük ve topluluk güvenliği.',
-          'Kıyafet görsellerinin arka planının kaldırılması (isteğe bağlı özellik): görsel bu amaçla remove.bg servisine iletilir — sözleşmenin ifası ve hizmet kalitesi.',
-          'Hava durumuna uygun kombin önerileri sunmak için yaklaşık (coarse) konumunun hava durumu servisine (Open-Meteo) gönderilmesi — açık rızan.',
+          'Dijital gardırop yönetimi ve renk/stil uyumuna dayalı otomatik kombin önerileri sunma — sözleşmenin ifası ve meşru menfaat.',
+          'İçerik moderasyonu: topluluk paylaşım kartları, Style Arena fit kartları ve profil fotoğrafları, yayınlanmadan önce Google Cloud Vision ile yetişkinlere yönelik, şiddet içeren veya müstehcen içerik işaretleri ve görsel üzerindeki uygunsuz yazılar bakımından otomatik olarak kontrol edilir. Bu denetimden önce ayrıca iznin istenir; izin vermezsen gardırobunu özel olarak kullanmaya devam edebilirsin. Nefret, taciz, spam, sahtecilik ve diğer ihlaller kullanıcı raporları, engelleme araçları ve gerektiğinde manuel inceleme yoluyla yönetilir. Otomatik denetim geçici olarak gerçekleştirilemezse içerik herkese açılmaz ve beklemede tutulur — hukuki yükümlülük ve topluluk güvenliği.',
+          'Kıyafet görsellerinin arka planının kaldırılması (isteğe bağlı özellik): ayrıca izin verdiğinde görsel bu amaçla remove.bg servisine iletilir; izin vermezsen fotoğraf orijinal hâliyle kullanılır — açık rızan.',
+          'Hava durumuna uygun kombin önerileri sunmak için yaklaşık (coarse) konumunun, yaklaşık 1 km\'lik bir ızgaraya (0,01 derece) yuvarlandıktan sonra hava durumu servisine (Open-Meteo) gönderilmesi — açık rızan.',
           'Takip, arkadaş ligleri, 1v1 düellolar ve push bildirimleri gibi sosyal özelliklerin sağlanması — sözleşmenin ifası ve meşru menfaat.',
           'Plan limitlerinin uygulanması (günlük kombin/paylaşım kotaları) — sözleşmenin ifası.',
           'Kullanıcı raporları ve engellemelerin işlenmesi — hukuki yükümlülük ve topluluk güvenliği.',
@@ -73,9 +72,9 @@ const content = {
         text: 'Verileriniz aşağıdaki üçüncü taraf hizmet sağlayıcılarla paylaşılır:',
         items: [
           'Firebase (Google LLC): kimlik doğrulama (Firebase Auth), veritabanı (Firestore), dosya depolama (Cloud Storage), sunucu tarafı işlevler (Cloud Functions). Google gizlilik politikası: https://policies.google.com/privacy',
-          'Google Cloud Vision (Google LLC): topluluk paylaşımının proof/selfie görseli ve Style Arena\'da oluşturulan birleşik fit kartı; yetişkinlere yönelik, şiddet içeren veya müstehcen içerik işaretlerini kontrol etmek amacıyla SafeSearch hizmetine gönderilir. Gardırop görselleri ve profil fotoğrafları bu otomatik SafeSearch kontrolünün kapsamında değildir. İşleme, uygulamanın Google Cloud servis hesabı üzerinden gerçekleşir. Google gizlilik politikası: https://policies.google.com/privacy',
+          'Google Cloud Vision (Google LLC): topluluk paylaşım kartı, Style Arena\'da oluşturulan birleşik fit kartı ve profil fotoğrafı; yetişkinlere yönelik, şiddet içeren veya müstehcen içerik işaretlerini ve görsel üzerindeki yazıları (OCR) kontrol etmek amacıyla gönderilir. Özel gardırop görselleri bu otomatik kontrolün kapsamında değildir. İşleme, uygulamanın Google Cloud servis hesabı üzerinden gerçekleşir. Google gizlilik politikası: https://policies.google.com/privacy',
           'Firebase App Check: hizmeti kötüye kullanımdan korumak ve isteklerin gerçek uygulama örneklerinden geldiğini doğrulamak için iOS\'ta Apple App Attest, Android\'de Google Play Integrity ve web ortamında reCAPTCHA v3 kullanılır. Bu sağlayıcılar doğrulama amacıyla cihaz ve istek bilgilerini işleyebilir.',
-          'Sentry (Functional Software, Inc.): uygulama kararlılığını sağlamak için crash/hata raporlama hizmeti. Gönderilen veriler yalnızca hata ayrıntıları ve takma-adlı Firebase UID\'dir; e-posta veya başka kişisel bilgi gönderilmez ve bu veriler reklam için kullanılmaz. Sentry gizlilik politikası: https://sentry.io/privacy/',
+          'Sentry (Functional Software, Inc.): yalnızca izin verdiğinde kullanılan crash/hata raporlama hizmeti. Gönderilen veriler hata/performans ayrıntıları, uygulama içi kullanım olayları ve takma-adlı Firebase UID\'dir; e-posta gönderilmez ve bu veriler reklam için kullanılmaz. Sentry gizlilik politikası: https://sentry.io/privacy/',
           'Firebase Analytics (Google LLC, yalnızca web): web sürümünde temel kullanım ölçümü için kullanılır. Bu veriler reklam veya uygulamalar arası izleme için kullanılmaz. Google gizlilik politikası: https://policies.google.com/privacy',
           'remove.bg (Kaleido AI GmbH): arka plan kaldırma özelliğini kullandığında, ilgili kıyafet görseli arka planının kaldırılması amacıyla remove.bg servisine gönderilir. remove.bg gizlilik politikası: https://www.remove.bg/privacy',
           'Expo push servisi (650 Industries, Inc.): push bildirimleri, cihaz push jetonun ve bildirim içeriği kullanılarak Expo\'nun push altyapısı (exp.host) üzerinden iletilir. Expo gizlilik politikası: https://expo.dev/privacy',
@@ -112,11 +111,11 @@ const content = {
       },
       {
         title: '11. Çocukların Gizliliği',
-        text: 'Uygulama 16 yaşından küçük kullanıcılara yönelik değildir ve bilinçli olarak 16 yaşından küçük bireylerden kişisel veri toplamaz. 16 yaş altı bir kullanıcının veri paylaştığını fark etmemiz halinde ilgili hesap ve veriler en kısa sürede silinir. Ebeveynler veya yasal vasiler bu durumu contact@skymoonstudios.com adresine bildirerek silme talep edebilir.',
+        text: 'Uygulama 16 yaşından küçük kullanıcılara yönelik değildir ve bilinçli olarak 16 yaşından küçük bireylerden kişisel veri toplamaz. 16 yaş altı bir kullanıcının veri paylaştığını fark etmemiz halinde ilgili hesap ve veriler en kısa sürede silinir. Ebeveynler veya yasal vasiler bu durumu contact.skymoonstudios@gmail.com adresine bildirerek silme talep edebilir.',
       },
       {
         title: '12. KVKK ve GDPR Kapsamındaki Haklarınız',
-        text: 'Aşağıdaki haklarınızı kullanmak için contact@skymoonstudios.com adresine başvurabilirsiniz:',
+        text: 'Aşağıdaki haklarınızı kullanmak için contact.skymoonstudios@gmail.com adresine başvurabilirsiniz:',
         items: [
           'Kişisel verilerinizin işlenip işlenmediğini öğrenme.',
           'İşlenmişse buna ilişkin bilgi talep etme.',
@@ -130,7 +129,7 @@ const content = {
           'Verilerinizin taşınabilirliğini talep etme (GDPR m.20).',
           'İşlemenin kısıtlanmasını isteme (GDPR m.18).',
         ],
-        contact: 'Başvuru adresi: contact@skymoonstudios.com — Talepler en geç 30 gün içinde yanıtlanır.',
+        contact: 'Başvuru adresi: contact.skymoonstudios@gmail.com — Talepler en geç 30 gün içinde yanıtlanır.',
       },
       {
         title: '13. Politika Değişiklikleri',
@@ -144,12 +143,12 @@ const content = {
   },
   en: {
     title: 'Privacy Policy',
-    lead: 'Last updated: August 2, 2026. This policy explains how the StyleUpS mobile application ("App") collects, processes, stores, and protects personal data. We act as the data controller under applicable data protection laws, including the Turkish Personal Data Protection Law No. 6698 (KVKK) and the EU General Data Protection Regulation (GDPR).',
+    lead: 'Last updated: September 28, 2026. This policy explains how the StyleUpS mobile application ("App") collects, processes, stores, and protects personal data. We act as the data controller under applicable data protection laws, including the Turkish Personal Data Protection Law No. 6698 (KVKK) and the EU General Data Protection Regulation (GDPR).',
     sections: [
       {
         title: '1. Data Controller',
         text: 'The individual or entity that develops and operates the StyleUpS application is the data controller.',
-        contact: 'Contact: contact@skymoonstudios.com',
+        contact: 'Contact: contact.skymoonstudios@gmail.com',
       },
       {
         title: '2. Personal Data We Collect',
@@ -157,7 +156,7 @@ const content = {
         items: [
           'Identity and account data: your email address when registering with email/password; the actual or private relay email address supplied by Apple when using Sign in with Apple on a supported Apple device; your user-chosen display name (max 15 characters); and the Firebase-generated unique user ID (UID).',
           'Wardrobe data: uploaded garment photos, garment category (top, bottom, shoes, outerwear), color information, and style tags. This data is stored in Firebase Cloud Storage and Firestore.',
-          'Community post data: selfie photo (taken via camera), selected outfit information (garment images, colors, styles), username. Posts are stored in Firestore and visible to all signed-in users.',
+          'Community post data: the outfit card image you compose from your wardrobe pieces (no selfie or face photo is requested), selected outfit information (garment images, colors, styles), username. Posts are stored in Firestore and visible to all signed-in users.',
           'Style Arena data: the face-free "fit cards" you create (outfit images, colors, styles), each fit card\'s rank/points/win-loss record, the votes you cast, and your displayed username. Your fit cards and league standing are shown publicly to other users; voting is anonymous.',
           'Profile photo: the optional profile (avatar) photo you upload is stored in Firebase Cloud Storage. Together with your display name it is shown publicly to other users on your public profile, the league table, and social features. Profile photos are subject to the community rules; violations can be raised through user-blocking tools and support or moderation channels.',
           'Social graph data: the users you follow and who follow you, and your follower/following counts. Your follow relationships and these counts are visible to other users.',
@@ -167,7 +166,7 @@ const content = {
           'Usage data: daily outfit generation count, daily share count, referral code. This information is stored to enforce plan limits.',
           'Notification data: if you allow notifications, a device push token (Expo push token) is generated and stored linked to your account. This token is used only to send streak reminders, arena/voting reminders, and weekly challenge notifications.',
           'Location data: only when you grant permission and while the app is open, your approximate (coarse) location is used to provide weather-appropriate outfit suggestions. Location is processed solely to fetch weather information; we do not store location history, sell it, or share it with third parties for marketing.',
-          'Diagnostics (crash) data: when a crash or error occurs, error details and a pseudonymous user identifier (Firebase UID) are sent to the crash-reporting service Sentry. No email or other personal information is sent.',
+          'Diagnostics (crash) data: optional and off by default. Only if you explicitly allow it, error/performance details, in-app usage events and a pseudonymous user identifier (Firebase UID) are sent to Sentry when a crash or error occurs. Your email address is not sent. You can withdraw this at any time in Settings → Privacy choices.',
           'Device preferences: language preference (TR/EN) is stored on-device (AsyncStorage) and is not sent to the server.',
         ],
       },
@@ -185,8 +184,8 @@ const content = {
         title: '4. Device Permissions',
         text: 'The App requests the following device permissions:',
         items: [
-          'Camera access: used to take selfie proof photos for community posts. The camera only operates when the user actively takes a photo.',
-          'Photo library access: used to upload garment photos to the wardrobe and select proof photos.',
+          'Camera access: used to photograph clothing items you add to your wardrobe. The camera only operates when the user actively takes a photo.',
+          'Photo library access: used to upload garment photos to the wardrobe and choose a profile photo. If you choose "Save Image" in the share sheet, your outfit card is saved to your photo library.',
           'Location access (approximate/coarse): used only when you request it and while the app is open, to provide weather-appropriate outfit suggestions. You can revoke this permission at any time in device settings.',
           'Notification permission: used to send streak reminders, arena/voting reminders, and weekly challenge notifications. You can turn notifications off at any time in device settings.',
           'No background camera, photo library, or location access occurs.',
@@ -196,11 +195,10 @@ const content = {
         title: '5. Purposes and Legal Basis for Processing',
         items: [
           'Account creation and authentication (Firebase Authentication) — performance of contract.',
-          'Digital wardrobe management and AI-powered outfit suggestions — performance of contract and legitimate interest.',
-          'Proof feature for community posts: the selfie taken during sharing is stored to indicate the post belongs to a genuine outfit and is screened for safety before publishing — legitimate interest and service quality.',
-          'Content moderation: community proof images and Style Arena fit cards are automatically checked with Google Cloud Vision SafeSearch for adult, violent, or racy content signals before publication. Hate, harassment, spam, fraud, and other violations are handled through user reports, blocking tools, and manual review when necessary. If automated screening is temporarily unavailable, the content is not published and remains pending — legal obligation and community safety.',
-          'Removing the background of garment images (optional feature): the image is sent to the remove.bg service for this purpose — performance of contract and service quality.',
-          'Sending your approximate (coarse) location to the weather service (Open-Meteo) to provide weather-appropriate outfit suggestions — your explicit consent.',
+          'Digital wardrobe management and automatic outfit suggestions based on color and style matching — performance of contract and legitimate interest.',
+          'Content moderation: community post cards, Style Arena fit cards and profile photos are automatically checked with Google Cloud Vision for adult, violent, or racy content signals and objectionable text within the image before publication. Your permission is requested separately before this check; if you decline, you can keep using your private wardrobe. Hate, harassment, spam, fraud, and other violations are handled through user reports, blocking tools, and manual review when necessary. If automated screening is temporarily unavailable, the content is not published and remains pending — legal obligation and community safety.',
+          'Removing the background of garment images (optional feature): after your separate permission, the image is sent to the remove.bg service for this purpose; if you decline, the original photo is used — your explicit consent.',
+          'Sending your approximate (coarse) location, rounded to a grid of about 1 km (0.01 degree), to the weather service (Open-Meteo) to provide weather-appropriate outfit suggestions — your explicit consent.',
           'Providing social features such as follows, friend leagues, 1v1 duels, and push notifications — performance of contract and legitimate interest.',
           'Enforcing plan limits (daily outfit/share quotas) — performance of contract.',
           'Processing user reports and blocks — legal obligation and community safety.',
@@ -212,9 +210,9 @@ const content = {
         text: 'Your data is shared with the following third-party service providers:',
         items: [
           'Firebase (Google LLC): authentication (Firebase Auth), database (Firestore), file storage (Cloud Storage), server-side functions (Cloud Functions). Google privacy policy: https://policies.google.com/privacy',
-          'Google Cloud Vision (Google LLC): the community post proof/selfie image and the combined fit card created for Style Arena are sent to SafeSearch to check for adult, violent, or racy content signals. Wardrobe images and profile photos are outside this automated SafeSearch screening. Processing occurs through the app\'s Google Cloud service account. Google privacy policy: https://policies.google.com/privacy',
+          'Google Cloud Vision (Google LLC): the community post card, the combined fit card created for Style Arena and your profile photo are sent to check for adult, violent, or racy content signals and text within the image (OCR). Private wardrobe images are outside this automated screening. Processing occurs through the app\'s Google Cloud service account. Google privacy policy: https://policies.google.com/privacy',
           'Firebase App Check: to protect the service from abuse and verify requests from genuine app instances, we use Apple App Attest on iOS, Google Play Integrity on Android, and reCAPTCHA v3 on the web. These providers may process device and request information for verification.',
-          'Sentry (Functional Software, Inc.): crash/error reporting to keep the app stable. The only data sent is error details and a pseudonymous Firebase UID; no email or other personal information is sent, and this data is not used for advertising. Sentry privacy policy: https://sentry.io/privacy/',
+          'Sentry (Functional Software, Inc.): crash/error reporting used only if you allow it. The data sent is error/performance details, in-app usage events and a pseudonymous Firebase UID; no email is sent, and this data is not used for advertising. Sentry privacy policy: https://sentry.io/privacy/',
           'Firebase Analytics (Google LLC, web only): used for basic usage metrics in the web version. This data is not used for advertising or cross-app tracking. Google privacy policy: https://policies.google.com/privacy',
           'remove.bg (Kaleido AI GmbH): when you use the background-removal feature, the relevant garment image is sent to remove.bg to remove its background. remove.bg privacy policy: https://www.remove.bg/privacy',
           'Expo push service (650 Industries, Inc.): push notifications are delivered through Expo\'s push infrastructure (exp.host) using your device push token and the notification content. Expo privacy policy: https://expo.dev/privacy',
@@ -251,11 +249,11 @@ const content = {
       },
       {
         title: '11. Children\'s Privacy',
-        text: 'The App is not intended for users under 16 and does not knowingly collect personal data from individuals under 16. If we become aware that a user under 16 has shared personal data, the relevant account and data will be deleted as soon as possible. Parents or legal guardians may request deletion by contacting contact@skymoonstudios.com.',
+        text: 'The App is not intended for users under 16 and does not knowingly collect personal data from individuals under 16. If we become aware that a user under 16 has shared personal data, the relevant account and data will be deleted as soon as possible. Parents or legal guardians may request deletion by contacting contact.skymoonstudios@gmail.com.',
       },
       {
         title: '12. Your Rights Under KVKK and GDPR',
-        text: 'You may exercise the following rights by contacting contact@skymoonstudios.com:',
+        text: 'You may exercise the following rights by contacting contact.skymoonstudios@gmail.com:',
         items: [
           'Learn whether your personal data is being processed.',
           'Request information about processing activities.',
@@ -269,7 +267,7 @@ const content = {
           'Request data portability (GDPR Article 20).',
           'Request restriction of processing (GDPR Article 18).',
         ],
-        contact: 'Contact: contact@skymoonstudios.com — Requests are responded to within 30 days.',
+        contact: 'Contact: contact.skymoonstudios@gmail.com — Requests are responded to within 30 days.',
       },
       {
         title: '13. Policy Changes',
