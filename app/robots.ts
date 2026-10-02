@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: 'https://styleups.me/sitemap.xml',
+    sitemap: 'https://www.styleups.me/sitemap.xml',
   };
 }

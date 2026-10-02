@@ -3,11 +3,11 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Kullanım Koşulları | StyleUpS',
   description: 'StyleUpS kullanım koşulları – planlar, topluluk, Style Arena ve hizmet şartları.',
-  alternates: { canonical: 'https://styleups.me/terms' },
+  alternates: { canonical: 'https://www.styleups.me/terms' },
   openGraph: {
     title: 'Kullanım Koşulları | StyleUpS',
     description: 'StyleUpS kullanım koşulları – planlar, topluluk, Style Arena ve hizmet şartları.',
-    url: 'https://styleups.me/terms',
+    url: 'https://www.styleups.me/terms',
     siteName: 'StyleUpS',
     type: 'website',
     images: ['/og-image-v2.png'],
